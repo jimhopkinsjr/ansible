@@ -1,0 +1,34 @@
+---
+# roles/ansible/tasks/main.yml
+
+- name: "{{ role_path | basename }}: Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+
+- name: "{{ role_path | basename }}: MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
+
+- name: "{{ role_path | basename }}: .ansible.cfg"
+  copy:
+    dest: "{{ homedir }}/.ansible.cfg"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0444'
+    src: "ansible.cfg"
+    force: true
+    backup: yes
+
+- name: "{{ role_path | basename }}: inventory file."
+  copy:
+    dest: "/etc/ansible/hosts"
+    mode: '0444'
+    src: "inventory.yml"
+    force: true
+    backup: yes
+  become: true
+
+- name: "{{ role_path | basename }}: Clean up playbook.retry files."
+  file:
+    path: "{{ homedir }}/playbook.retry"
+    state: "absent"

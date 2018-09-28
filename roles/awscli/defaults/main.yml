@@ -1,0 +1,8 @@
+---
+# roles/awscli/defaults/main.yml
+
+awscli_bin_location: "/usr/local/bin/aws"
+awscli_install_dir: "/opt/aws"
+awscli_url: "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip"
+
+downloads_dir: "~/Downloads"

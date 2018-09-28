@@ -1,0 +1,16 @@
+---
+# site.yml
+- name: "c60"
+  hosts: c60
+  connection: local
+  become: false
+  roles:
+    - { role: ansible, tags: ansible }
+    - { role: awscli, tags: awscli }
+
+- name: "nuc"
+  hosts: nuc
+  connection: ssh
+  become: false
+  roles:
+    - plex

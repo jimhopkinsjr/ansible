@@ -1,0 +1,37 @@
+---
+# roles/plex/tasks/debian.yml
+
+- name: "{{ role_path | basename }}: prerequisite packages."
+  package:
+    name: "apt-transport-https"
+    state: latest
+  become: true
+  tags:
+    - packages
+
+- name: "{{ role_path | basename }}: apt repo key"
+  apt_key:
+    url: https://downloads.plex.tv/plex-keys/PlexSign.key
+    state: present
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: apt repo"
+  apt_repository:
+    repo: "deb https://downloads.plex.tv/repo/deb ./public main"
+    state: present
+    filename: plex
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: Install packages."
+  package:
+    name:
+      - deb-multimedia-keyring
+      - plexmediaserver
+    state: latest
+  become: true
+  tags:
+    - packages

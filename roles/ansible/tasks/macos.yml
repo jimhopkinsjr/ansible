@@ -1,0 +1,6 @@
+---
+# roles/ansible/tasks/macos.yml
+
+- name: "{{ role_path | basename }}: Debug"
+  debug:
+    msg: "Running in MacOS"

@@ -1,0 +1,8 @@
+---
+# roles/plex/tasks/main.yml
+
+- name: "{{ role_path | basename }}: Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+  - ansible

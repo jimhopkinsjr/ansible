@@ -1,0 +1,5 @@
+---
+group: "jpuellma"
+homedir: "/home/{{ username }}"
+downloads_dir: "/{{ homedir }}/Downloads"
+username: "jpuellma"

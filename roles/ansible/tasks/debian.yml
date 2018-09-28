@@ -1,0 +1,22 @@
+---
+# roles/ansible/tasks/debian.yml
+
+# This doesn't really work because 2.4 is needed to properly filter the vars
+# so it needs to be manually installed before these plays are run anyway.
+- name: "{{ role_path | basename }}: apt repository."
+  apt_repository:
+    repo: "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main"
+    state: present
+    filename: ansible
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: Install package."
+  package:
+    name: "ansible"
+    state: latest
+  become: true
+  tags:
+  - packages
+
