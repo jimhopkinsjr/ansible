@@ -1,0 +1,12 @@
+---
+# roles/vlc/defaults/main.yml
+
+vlc_packages:
+  - vlc
+  - vlc-plugin-access-extra
+  - vlc-plugin-qt
+  - vlc-plugin-svg
+  - vlc-plugin-video-output
+  - vlc-plugin-visualization
+  - vlc-plugin-vlsub
+  - vlc-plugin-notify

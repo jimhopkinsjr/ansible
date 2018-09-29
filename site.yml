@@ -9,6 +9,9 @@
     - { role: awscli, tags: awscli }
     - { role: bash, tags: bash }
     - { role: docker, tags: docker }
+    - { role: sound, tags: sound }
+    - { role: clementine, tags: clementine }
+    - { role: vlc, tags: vlc }
 
 - name: "nuc"
   hosts: nuc

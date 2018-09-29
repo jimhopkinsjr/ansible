@@ -1,0 +1,10 @@
+---
+# roles/sound/tasks/main.yml
+
+- name: "{{ role_path | basename }}: package install."
+  package:
+    name: "pavucontrol"
+    state: latest
+  become: true
+  tags:
+    - packages

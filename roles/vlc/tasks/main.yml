@@ -1,0 +1,11 @@
+---
+# roles/vlc/tasks/main.yml
+
+- name: "{{ role_path | basename }}: package install."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ vlc_packages }}"
+  tags:
+    - packages

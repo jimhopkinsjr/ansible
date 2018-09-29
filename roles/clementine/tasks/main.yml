@@ -1,0 +1,10 @@
+---
+# roles/clementine/tasks/main.yml
+
+- name: "{{ role_path | basename }}: package install."
+  package:
+    name: "clementine"
+    state: latest
+  become: true
+  tags:
+    - packages
