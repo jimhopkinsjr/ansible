@@ -22,6 +22,7 @@
     - { role: "slack", tags: "slack" }
     - { role: "postman", tags: "postman" }
     - { role: "source_code_font", tags: "source_code_font" }
+    - { role: "terraform", tags: "terraform" }
 
 - name: "nuc"
   hosts: nuc
