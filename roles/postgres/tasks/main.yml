@@ -1,0 +1,35 @@
+---
+# roles/postgres/tasks/main.yml
+
+- name: "Add apt key."
+  apt_key:
+    url: "https://www.postgresql.org/media/keys/ACCC4CF8.asc"
+    state: present
+    id: ACCC4CF8
+  become: true
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+    - packages
+
+- name: "apt repository."
+  apt_repository:
+    repo: "deb http://apt.postgresql.org/pub/repos/apt/ stretch-pgdg main"
+    state: present
+    filename: postgresql
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  become: true
+  tags:
+    - packages
+
+- name: "install."
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - pgadmin4
+    - postgresql-10
+    - postgresql-client-10
+  become: true
+  tags:
+    - packages
+
