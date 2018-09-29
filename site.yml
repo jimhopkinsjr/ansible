@@ -14,6 +14,7 @@
     - { role: vlc, tags: vlc }
     - { role: gcloud, tags: gcloud }
     - { role: git_lfs, tags: git_lfs }
+    - { role: intellij, tags: intellij }
 
 - name: "nuc"
   hosts: nuc
