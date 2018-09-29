@@ -39,4 +39,6 @@
   connection: ssh
   become: false
   roles:
-  - { role: "docker", tags: "docker" }
+    - { role: "bash", tags: "bash" }
+    - { role: "docker", tags: "docker" }
+    - { role: "tmux", tags: "tmux" }
