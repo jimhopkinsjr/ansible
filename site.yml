@@ -13,6 +13,7 @@
     - { role: clementine, tags: clementine }
     - { role: vlc, tags: vlc }
     - { role: gcloud, tags: gcloud }
+    - { role: git_lfs, tags: git_lfs }
 
 - name: "nuc"
   hosts: nuc

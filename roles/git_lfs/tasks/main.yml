@@ -1,0 +1,41 @@
+---
+# roles/git_lfs/tasks/main.yml
+
+- name: "apt key."
+  apt_key:
+    url: "https://packagecloud.io/github/git-lfs/gpgkey"
+    state: present
+  become: true
+  tags:
+  - git
+  - packages
+
+- name: "apt repository."
+  apt_repository:
+    repo: "deb https://packagecloud.io/github/git-lfs/debian/ stretch main"
+    state: present
+    filename: "github_git-lfs"
+  become: true
+  tags:
+  - git
+  - packages
+
+- name: "apt src repository."
+  apt_repository:
+    repo: "deb-src https://packagecloud.io/github/git-lfs/debian/ stretch main"
+    state: present
+    filename: "github_git-lfs"
+  become: true
+  tags:
+  - git
+  - packages
+
+- name: "Install packages."
+  apt:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ git_lfs_packages }}"
+  become: true
+  tags:
+  - git
+  - packages
