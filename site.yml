@@ -15,6 +15,7 @@
     - { role: gcloud, tags: gcloud }
     - { role: git_lfs, tags: git_lfs }
     - { role: intellij, tags: intellij }
+    - { role: kubernetes, tags: kubernetes }
 
 - name: "nuc"
   hosts: nuc

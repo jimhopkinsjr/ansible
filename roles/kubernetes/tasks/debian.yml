@@ -1,0 +1,34 @@
+---
+# roles/kubernetes/tasks/debian.yml
+
+- name: "Install prerequisites for Debian."
+  package:
+    name: apt-transport-https
+    state: latest
+  become: true
+  tags:
+    - packages
+
+- name: "Add apt key"
+  apt_key:
+    url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+  become: true
+  tags:
+    - packages
+
+- name: "Add apt repo."
+  apt_repository:
+    repo: "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+    state: present
+    filename: "kubernetes"
+  become: true
+  tags:
+    - packages
+
+- name: "Install."
+  package:
+    name: kubectl
+    state: latest
+  become: true
+  tags:
+    - packages

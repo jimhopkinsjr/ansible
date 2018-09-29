@@ -1,0 +1,6 @@
+---
+# roles/kubernetes/tasks/main.yml
+
+- name: "Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
