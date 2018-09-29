@@ -24,6 +24,7 @@
     - { role: "source_code_font", tags: "source_code_font" }
     - { role: "terraform", tags: "terraform" }
     - { role: "vagrant", tags: "vagrant" }
+    - { role: "vim", tags: "vim" }
 
 - name: "nuc"
   hosts: nuc

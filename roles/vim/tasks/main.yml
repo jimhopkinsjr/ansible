@@ -1,0 +1,27 @@
+---
+# roles/vim/tasks/main.yml
+
+- name: "install package."
+  package:
+    name: vim
+    state: latest
+  become: true
+  tags:
+    - packages
+
+- name: .vimrc
+  copy:
+    dest: "{{ homedir }}/.vimrc"
+    src: "vimrc"
+
+- name: "Create vim bundle dir."
+  file:
+    path: "{{ homedir }}/.vim/bundle"
+    state: "directory"
+    owner: "{{ username}}"
+    group: "{{ group }}"
+
+- name: "Pull Vundle repo."
+  git:
+    repo: "http://github.com/VundleVim/Vundle.vim.git"
+    dest: "{{ homedir }}/.vim/bundle/Vundle.vim"
