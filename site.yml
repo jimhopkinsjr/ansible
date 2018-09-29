@@ -8,10 +8,12 @@
     - { role: ansible, tags: ansible }
     - { role: awscli, tags: awscli }
     - { role: bash, tags: bash }
+    - { role: docker, tags: docker }
 
 - name: "nuc"
   hosts: nuc
   connection: ssh
   become: false
   roles:
-    - plex
+    - { role: docker, tags: docker }
+
