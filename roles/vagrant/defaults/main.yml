@@ -1,0 +1,4 @@
+---
+# roles/vagrant/defaults/main.yml
+
+vagrant_deb_url: "https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb"

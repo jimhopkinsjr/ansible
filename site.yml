@@ -23,6 +23,7 @@
     - { role: "postman", tags: "postman" }
     - { role: "source_code_font", tags: "source_code_font" }
     - { role: "terraform", tags: "terraform" }
+    - { role: "vagrant", tags: "vagrant" }
 
 - name: "nuc"
   hosts: nuc
