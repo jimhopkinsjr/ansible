@@ -1,0 +1,26 @@
+---
+# roles/postman/tasks/main.yml
+
+- name: "Download archive."
+  get_url:
+    url: "https://dl.pstmn.io/download/latest/linux64"
+    dest: "{{ downloads_dir }}/postman.tgz"
+
+- name: "Extract archive."
+  unarchive:
+    src: "{{ downloads_dir }}/postman.tgz"
+    dest: "/opt/"
+  become: true
+
+- name: "Link the executable."
+  file:
+    path: "/usr/local/bin/postman"
+    state: "link"
+    src: "/opt/Postman/app/Postman"
+  become: true
+
+- name: "Desktop launcher."
+  copy:
+    dest: "/usr/share/applications/postman.desktop"
+    src: "postman.desktop"
+  become: true
