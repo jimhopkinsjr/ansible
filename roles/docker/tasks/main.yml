@@ -1,7 +1,7 @@
 ---
 # roles/docker/tasks/main.yml
 
-- name: "{{ role_path | basename }}: package install."
+- name: "package install."
   package:
     name: "docker-engine"
     state: latest
@@ -9,7 +9,7 @@
   tags:
   - packages
 
-- name: "{{ role_path | basename }}: Enable service."
+- name: "Enable service."
   service:
     name: "docker"
     state: "started"
@@ -18,7 +18,7 @@
   tags:
   - services
 
-- name: "{{ role_path | basename }}: Add {{ username }} to docker group."
+- name: "Add {{ username }} to docker group."
   user:
     name: "{{ username }}"
     groups: "docker"

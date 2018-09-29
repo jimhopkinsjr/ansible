@@ -1,13 +1,13 @@
 ---
 # roles/awscli/tasks/main.yml
 
-- name: "{{ role_path | basename }}: Create install dir."
+- name: "Create install dir."
   file:
     path: "{{ awscli_install_dir }}"
     state: "directory"
   become: true
 
-- name: "{{ role_path | basename }}: Download archive."
+- name: "Download archive."
   get_url:
     dest: "{{ downloads_dir }}"
     url: "{{ awscli_url }}"
@@ -15,7 +15,7 @@
     group: "{{ group }}"
     mode: '0644'
 
-- name: "{{ role_path | basename }}: Extract archive."
+- name: "Extract archive."
   unarchive:
     dest: "{{ downloads_dir }}"
     src: "{{ downloads_dir }}/{{ awscli_url | urlsplit('path') | basename }}"
@@ -23,14 +23,14 @@
   register: awscli_archive_contents
   become: true
 
-- name: "{{ role_path | basename }}: Run installer."
+- name: "Run installer."
   command: "{{ awscli_archive_contents.files[0] }} -i {{ awscli_install_dir }} -b {{ awscli_bin_location }}"
   args:
     chdir: "{{ awscli_archive_contents.dest }}"
     creates: "{{ awscli_bin_location}}"
   become: true
 
-- name: "{{ role_path | basename }}: Command completion."
+- name: "Command completion."
   file:
     path: "/usr/local/bin/aws_completer"
     state: link
