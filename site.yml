@@ -12,6 +12,7 @@
     - { role: sound, tags: sound }
     - { role: clementine, tags: clementine }
     - { role: vlc, tags: vlc }
+    - { role: gcloud, tags: gcloud }
 
 - name: "nuc"
   hosts: nuc

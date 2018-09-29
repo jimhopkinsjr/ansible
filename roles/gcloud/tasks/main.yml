@@ -1,0 +1,33 @@
+---
+# roles/gcloud/tasks/main.yml
+
+- name: "{{ role_path | basename }}: Install prerequisites for Debian."
+  package:
+    name: apt-transport-https
+    state: latest
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: Add apt key"
+  apt_key:
+    url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg "
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: Create apt repository."
+  apt_repository:
+    repo: "deb https://packages.cloud.google.com/apt cloud-sdk-stretch main"
+    state: present
+    filename: "google-cloud-sdk"
+  become: true
+  tags:
+  - packages
+
+- name: "{{ role_path | basename }}: Install."
+  package:
+    name: google-cloud-sdk
+  become: true
+  tags:
+  - packages
