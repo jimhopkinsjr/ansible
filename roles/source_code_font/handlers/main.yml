@@ -1,0 +1,8 @@
+---
+# roles/source_code_font/handlers/main.yml
+
+- name: "Update font cache."
+  command: "/usr/bin/fc-cache"
+  become: true
+  tags:
+  - fonts
