@@ -19,6 +19,7 @@
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
     - { role: "postgres", tags: [ "postgresql", "postgres" ] }
+    - { role: "slack", tags: "slack" }
 
 - name: "nuc"
   hosts: nuc
