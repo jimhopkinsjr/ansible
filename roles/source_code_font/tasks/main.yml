@@ -1,0 +1,20 @@
+---
+# roles/source_code_font/tasks/main.yml
+
+- name: "Make fonts download dir."
+  file:
+    path: "/usr/share/fonts/truetype/adobe"
+    state: "directory"
+  become: true
+  tags:
+  - fonts
+
+- name: "Download Source Code pro Fonts."
+  get_url:
+    dest: "/usr/share/fonts/truetype/adobe"
+    url: "{{ source_code_pro_font_url }}"
+    mode: '0644'
+  become: true
+  notify: "Update font cache."
+  tags:
+  - fonts

@@ -1,0 +1,4 @@
+---
+# roles/source_code_font/defaults/main.yml
+
+source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Roman.ttf"

@@ -21,6 +21,7 @@
     - { role: "postgres", tags: [ "postgresql", "postgres" ] }
     - { role: "slack", tags: "slack" }
     - { role: "postman", tags: "postman" }
+    - { role: "source_code_font", tags: "source_code_font" }
 
 - name: "nuc"
   hosts: nuc
