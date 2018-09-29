@@ -5,23 +5,22 @@
   connection: local
   become: false
   roles:
-    - { role: ansible, tags: ansible }
-    - { role: awscli, tags: awscli }
-    - { role: bash, tags: bash }
-    - { role: docker, tags: docker }
-    - { role: sound, tags: sound }
-    - { role: clementine, tags: clementine }
-    - { role: vlc, tags: vlc }
-    - { role: gcloud, tags: gcloud }
-    - { role: git_lfs, tags: git_lfs }
-    - { role: intellij, tags: intellij }
-    - { role: kubernetes, tags: kubernetes }
-    - { role: lastpass, tags: lastpass }
+    - { role: "ansible", tags: "ansible" }
+    - { role: "awscli", tags: "awscli" }
+    - { role: "bash", tags: "bash" }
+    - { role: "docker", tags: "docker" }
+    - { role: "sound", tags: "sound" }
+    - { role: "clementine", tags: "clementine" }
+    - { role: "vlc", tags: "vlc" }
+    - { role: "gcloud", tags: "gcloud" }
+    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
+    - { role: "intellij", tags: "intellij" }
+    - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
+    - { role: "lastpass", tags: "lastpass" }
 
 - name: "nuc"
   hosts: nuc
   connection: ssh
   become: false
   roles:
-    - { role: docker, tags: docker }
-
+  - { role: "docker", tags: "docker" }
