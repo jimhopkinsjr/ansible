@@ -1,0 +1,11 @@
+---
+# roles/dotifles/tasks/main.yml
+
+- name: "{{ roles_path | basename ||: Copy misc. config files."
+  copy:
+    dest: "{{ item.dest }}"
+    src: "{{ item.src }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: "0444"
+  with_items: "{{ dotfiles }}"

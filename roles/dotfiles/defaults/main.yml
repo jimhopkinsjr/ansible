@@ -1,0 +1,7 @@
+---
+# roles/dotfiles/defaults/main.yml
+
+dotfiles:
+  - name: "Xresources"
+    dest: "{{ homedir }}/.Xresources"
+    src: "Xresources"
