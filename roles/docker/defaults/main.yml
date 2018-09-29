@@ -1,0 +1,8 @@
+---
+# roles/docker/defaults/main.yml
+
+docker_prereqs:
+  - apt-transport-https
+  - ca-certificates
+  - software-properties-common
+  - wget
