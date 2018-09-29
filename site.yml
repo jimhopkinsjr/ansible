@@ -7,6 +7,7 @@
   roles:
     - { role: ansible, tags: ansible }
     - { role: awscli, tags: awscli }
+    - { role: bash, tags: bash }
 
 - name: "nuc"
   hosts: nuc

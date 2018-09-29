@@ -1,0 +1,14 @@
+---
+# roles/bash/tasks/main.yml
+
+- name: "{{ role_path | basename }}: Copy files."
+  copy:
+    dest: "{{ homedir }}/.{{ item }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: "0444"
+    src: "{{ item }}"
+  with_items:
+  - "bash_functions.sh"
+  - "bashrc"
+  - "bash_prompt.sh"
