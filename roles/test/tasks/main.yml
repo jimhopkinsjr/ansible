@@ -1,0 +1,12 @@
+---
+# roles/test/tasks/main.yml
+
+- name: "Test: Debug message."
+  debug:
+    msg: "Hello."
+
+- name: "Test: create tmp file."
+  copy:
+    dest: "/tmp/test_ran"
+    content: ""
+    force: no
