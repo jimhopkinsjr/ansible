@@ -1,0 +1,24 @@
+---
+# roles/lastpass/tasks/main.yml
+
+- name: "Create download dir."
+  file:
+    path: "{{ downloads_dir }}/lastpass"
+    state: "directory"
+
+- name: "Download archive."
+  get_url:
+    url: "{{ lastpass_url }}"
+    dest: "{{ downloads_dir }}/lastpass/{{ lastpass_url | urlsplit('path') | basename }}"
+
+- name: "Extract archive."
+  unarchive:
+    src: "{{ downloads_dir }}/lastpass/{{ lastpass_url | urlsplit('path') | basename }}"
+    dest: "{{ downloads_dir }}/lastpass"
+
+- name: "Instructions"
+  debug:
+    msg: <
+      To complete LastPass installation, cd to {{ downloads_dir }}/last_pass and
+      run the install_lastpass.sh script as root.
+

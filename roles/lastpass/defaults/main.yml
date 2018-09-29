@@ -1,0 +1,4 @@
+---
+# roles/lastpass/defaults/main.yml
+
+lastpass_url: "https://download.cloud.lastpass.com/linux/lplinux.tar.bz2"

@@ -16,6 +16,7 @@
     - { role: git_lfs, tags: git_lfs }
     - { role: intellij, tags: intellij }
     - { role: kubernetes, tags: kubernetes }
+    - { role: lastpass, tags: lastpass }
 
 - name: "nuc"
   hosts: nuc
