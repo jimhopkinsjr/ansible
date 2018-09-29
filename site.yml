@@ -26,6 +26,13 @@
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
+    - { role: "tmux", tags: "tmux" }
+  #TODO: - import_tasks: anyconnect.yml
+  #TODO: - import_tasks: spotify.yml
+  #TODO: - import_tasks: plex.yml
+  #TODO: - import_tasks: golang.yml
+  #TODO: - import_tasks: python.yml
+  #TODO: powerline
 
 - name: "nuc"
   hosts: nuc

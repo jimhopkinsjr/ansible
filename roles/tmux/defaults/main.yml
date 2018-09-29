@@ -1,0 +1,7 @@
+---
+# roles/tmux/defaults/main.yml
+
+tmux_packages:
+  - tmux
+  - tmux-plugin-manager
+  - tmuxinator

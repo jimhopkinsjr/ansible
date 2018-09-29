@@ -1,0 +1,9 @@
+---
+# roles/tmux/tasks/main.yml
+
+- name: "install packages"
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ tmux_packages }}"
