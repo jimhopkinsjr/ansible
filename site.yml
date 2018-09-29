@@ -17,6 +17,7 @@
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
+    - { role: "packer", tags: "packer" }
 
 - name: "nuc"
   hosts: nuc

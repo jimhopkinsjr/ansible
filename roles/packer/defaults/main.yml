@@ -1,0 +1,5 @@
+---
+# roles/packer/defaults/main.yml
+
+packer_installdir: "/opt/HashiCorp"
+packer_url: "https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip"

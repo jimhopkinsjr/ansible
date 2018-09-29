@@ -1,0 +1,31 @@
+---
+# roles/packer/tasks/main.yml
+
+- name: "Create installation dir."
+  file:
+    path: "{{ packer_installdir }}"
+    state: "directory"
+  become: true
+
+- name: "Download archive."
+  get_url:
+    dest: "{{ downloads_dir }}"
+    url: "{{ packer_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+
+- name: "Extract archive."
+  unarchive:
+    dest: "{{ packer_installdir }}"
+    src: "{{ downloads_dir }}/{{ packer_url | urlsplit('path') | basename }}"
+    list_files: true
+  register: packer_archive_contents
+  become: true
+
+- name: "Add link to binary."
+  file:
+    path: "/usr/local/bin/packer"
+    state: link
+    src: "{{ packer_archive_contents.dest }}/{{ packer_archive_contents.files[0] }}"
+  become: true
