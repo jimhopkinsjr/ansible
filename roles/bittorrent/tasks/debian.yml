@@ -1,0 +1,11 @@
+---
+# roles/bittorrent/tasks/debian.yml
+
+- name: "packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages }}"
+  tags:
+    - packages

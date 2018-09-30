@@ -28,6 +28,7 @@
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
     - { role: "tmux", tags: "tmux" }
+    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
   #TODO: - import_tasks: anyconnect.yml
   #TODO: - import_tasks: spotify.yml
   #TODO: - import_tasks: plex.yml
@@ -45,3 +46,4 @@
     - { role: "docker", tags: "docker" }
     - { role: "tmux", tags: "tmux" }
     - { role: "plex", tags: "plex" }
+    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
