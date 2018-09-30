@@ -1,7 +1,7 @@
 ---
 # roles/common/defaults/main.yml
 
-common_packages:
+packages:
   - apt-config-auto-update
   - aptitude
   - curl

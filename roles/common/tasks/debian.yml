@@ -6,6 +6,6 @@
     name: "{{ item }}"
     state: latest
   become: true
-  with_items: "{{ common_packages }}"
+  with_items: "{{ packages }}"
   tags:
     - packages
