@@ -44,3 +44,4 @@
     - { role: "bash", tags: "bash" }
     - { role: "docker", tags: "docker" }
     - { role: "tmux", tags: "tmux" }
+    - { role: "plex", tags: "plex" }
