@@ -1,0 +1,13 @@
+---
+# roles/common/defaults/main.yml
+
+common_packages:
+  - apt-config-auto-update
+  - aptitude
+  - curl
+  - git
+  - git-cola
+  - mlocate
+  - shellcheck
+  - tree
+  - tree

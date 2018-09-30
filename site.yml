@@ -5,6 +5,7 @@
   connection: local
   become: false
   roles:
+    - { role: "common", tags: "common" }
     - { role: "ansible", tags: "ansible" }
     - { role: "awscli", tags: "awscli" }
     - { role: "bash", tags: "bash" }
@@ -39,6 +40,7 @@
   connection: ssh
   become: false
   roles:
+    - { role: "common", tags: "common" }
     - { role: "bash", tags: "bash" }
     - { role: "docker", tags: "docker" }
     - { role: "tmux", tags: "tmux" }

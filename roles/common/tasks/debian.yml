@@ -1,0 +1,11 @@
+---
+# roles/common/tasks/debian.yml
+
+- name: "packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ common_packages }}"
+  tags:
+    - packages
