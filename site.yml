@@ -36,6 +36,7 @@
   #TODO: - import_tasks: golang.yml
   #TODO: - import_tasks: python.yml
   #TODO: powerline
+  #TODO: tcpdump and wireshark
 
 - name: "nuc"
   hosts: nuc
