@@ -1,7 +1,7 @@
 ---
-# roles/dotifles/tasks/main.yml
+# roles/dotfiles/tasks/main.yml
 
-- name: "{{ role_path | basename ||: Copy misc. config files."
+- name: "Misc. config files."
   copy:
     dest: "{{ item.dest }}"
     src: "{{ item.src }}"

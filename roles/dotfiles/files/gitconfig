@@ -1,0 +1,40 @@
+[user]
+	name = James Puellmann
+	email = james.puellmann@gmail.com
+[core]
+	editor = vim
+[merge]
+	tool = meld
+[color]
+	interactive = auto
+	diff = auto
+	status = auto
+	branch = auto
+[gui]
+	fontui = -family \"DejaVu Sans\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	fontdiff = -family \"DejaVu Sans Mono\" -size 10 -weight normal -slant roman -underline 0 -overstrike 0
+	recentrepo = /home/jpuellmann/bin
+	recentrepo = /home/jpuellmann/.crypt
+	tabsize = 4
+	editor = code
+	historybrowser = gitk
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	a = add
+[push]
+	default = simple
+[cola]
+	fontdiff = Source Code Pro,10,-1,5,50,0,0,0,0,0
+	tabwidth = 2
+	textwidth = 80
+	spellcheck = false
+[diff]
+	tool = xxdiff
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

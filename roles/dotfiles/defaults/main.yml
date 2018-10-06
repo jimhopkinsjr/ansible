@@ -5,3 +5,6 @@ dotfiles:
   - name: "Xresources"
     dest: "{{ homedir }}/.Xresources"
     src: "Xresources"
+  - name: "gitconfig"
+    dest: "{{ homedir}}/.gitconfig"
+    src: "gitconfig"
