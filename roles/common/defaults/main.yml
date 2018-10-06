@@ -3,6 +3,7 @@
 
 packages:
   - apt-config-auto-update
+  - dnsutils
   - aptitude
   - curl
   - git
