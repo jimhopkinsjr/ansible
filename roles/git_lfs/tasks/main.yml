@@ -20,16 +20,6 @@
   - git
   - packages
 
-- name: "apt src repository."
-  apt_repository:
-    repo: "deb-src https://packagecloud.io/github/git-lfs/debian/ stretch main"
-    state: present
-    filename: "github_git-lfs"
-  become: true
-  tags:
-  - git
-  - packages
-
 - name: "Install packages."
   apt:
     name: "{{ item }}"

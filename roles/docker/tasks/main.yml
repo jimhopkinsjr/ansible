@@ -1,6 +1,15 @@
 ---
 # roles/docker/tasks/main.yml
 
+- name: "prerequisite packages"
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ docker_prereqs }}"
+  tags:
+    - packages
+
 - name: "Add apt key"
   apt_key:
     url: "https://download.docker.com/linux/debian/gpg"
@@ -16,15 +25,6 @@
   become: true
   tags:
   - packages
-
-- name: "prerequisite packages"
-  package:
-    name: "{{ item }}"
-    state: latest
-  become: true
-  with_items: "{{ docker_prereqs }}"
-  tags:
-    - packages
 
 - name: "package install."
   package:
