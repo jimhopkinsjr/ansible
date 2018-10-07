@@ -55,6 +55,7 @@
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
+    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
 
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml

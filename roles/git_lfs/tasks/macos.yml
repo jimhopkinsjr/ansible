@@ -1,0 +1,10 @@
+---
+# roles/git_lfs/tasks/macos.yml
+
+- name: "MacOS | Install packages."
+  package:
+    name: "{{ git_lfs_packages_macos }}"
+    state: latest
+  tags:
+  - git
+  - packages

@@ -1,7 +1,11 @@
 ---
 # roles/git_lfs/defaults/main.yml
 
-git_lfs_packages:
+git_lfs_packages_debian:
   - debian-archive-keyring
+  - git
+  - git-lfs
+
+git_lfs_packages_macos:
   - git
   - git-lfs
