@@ -30,15 +30,6 @@
     - { role: "tmux", tags: "tmux" }
     - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
     - { role: "dotfiles", tags: "dotfiles" }
-  #TODO: - import_tasks: anyconnect.yml
-  #TODO: - import_tasks: spotify.yml
-  #TODO: - import_tasks: plex.yml
-  #TODO: - import_tasks: golang.yml
-  #TODO: - import_tasks: python.yml
-  #TODO: powerline
-  #TODO: tcpdump and wireshark
-  #TODO: tmux
-  #TODO: vpn
 
 - name: "nuc"
   hosts: nuc
@@ -63,3 +54,14 @@
     - { role: "aws", tags: "aws" }
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
+
+#TODO: - import_tasks: anyconnect.yml
+#TODO: - import_tasks: spotify.yml
+#TODO: - import_tasks: plex.yml
+#TODO: - import_tasks: golang.yml
+#TODO: - import_tasks: python.yml
+#TODO: powerline
+#TODO: tcpdump and wireshark
+#TODO: tmux
+#TODO: vpn
+#TODO: java/sdkman
