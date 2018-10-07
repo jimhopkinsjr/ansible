@@ -1,6 +1,9 @@
 ---
 # roles/ansible/tasks/macos.yml
 
-- name: "{{ role_path | basename }}: Debug"
-  debug:
-    msg: "Running in MacOS"
+- name: "macos | homebrew package"
+  package:
+    name: "ansible"
+    state: latest
+  tags:
+  - packages

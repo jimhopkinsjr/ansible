@@ -4,10 +4,15 @@
 - name: "Debian tasks."
   import_tasks: debian.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+    - linux
+    - debian
 
 - name: "MacOS tasks."
   import_tasks: macos.yml
   when: ansible_distribution == 'MacOSX'
+  tags:
+    - macos
 
 - name: ".ansible.cfg"
   copy:
@@ -30,5 +35,8 @@
 
 - name: "Clean up playbook.retry files."
   file:
-    path: "{{ homedir }}/playbook.retry"
+    path: "{{ item }}"
     state: "absent"
+  with_items:
+    - "{{ homedir }}/playbook.retry"
+    - "{{ homedir }}/ansible/site.retry"

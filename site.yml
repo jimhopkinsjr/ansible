@@ -59,3 +59,4 @@
   roles:
     - { role: "common", tags: "common" }
     - { role: "bash", tags: "bash" }
+    - { role: "ansible", tags: "ansible" }
