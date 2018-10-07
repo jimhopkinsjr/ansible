@@ -1,38 +1,15 @@
 ---
 # roles/awscli/tasks/main.yml
 
-- name: "Create install dir."
-  file:
-    path: "{{ awscli_install_dir }}"
-    state: "directory"
-  become: true
+- name: "Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+  - linux
+  - debian
 
-- name: "Download archive."
-  get_url:
-    dest: "{{ downloads_dir }}"
-    url: "{{ awscli_url }}"
-    owner: "{{ username }}"
-    group: "{{ group }}"
-    mode: '0644'
-
-- name: "Extract archive."
-  unarchive:
-    dest: "{{ downloads_dir }}"
-    src: "{{ downloads_dir }}/{{ awscli_url | urlsplit('path') | basename }}"
-    list_files: true
-  register: awscli_archive_contents
-  become: true
-
-- name: "Run installer."
-  command: "{{ awscli_archive_contents.files[0] }} -i {{ awscli_install_dir }} -b {{ awscli_bin_location }}"
-  args:
-    chdir: "{{ awscli_archive_contents.dest }}"
-    creates: "{{ awscli_bin_location}}"
-  become: true
-
-- name: "Command completion."
-  file:
-    path: "/usr/local/bin/aws_completer"
-    state: link
-    src: "{{ awscli_install_dir }}/bin/aws_completer"
-  become: true
+- name: "MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
+  tags:
+  - macos

@@ -1,0 +1,9 @@
+---
+# roles/awscli/tasks/macos.yml
+
+- name: "MacOS | Install package."
+  package:
+    name: awscli
+    state: latest
+  tags:
+    - packages
