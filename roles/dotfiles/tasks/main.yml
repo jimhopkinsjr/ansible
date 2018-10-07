@@ -8,4 +8,5 @@
     owner: "{{ username }}"
     group: "{{ group }}"
     mode: "0444"
+    backup: yes
   with_items: "{{ dotfiles }}"
