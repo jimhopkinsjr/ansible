@@ -37,6 +37,8 @@
   #TODO: - import_tasks: python.yml
   #TODO: powerline
   #TODO: tcpdump and wireshark
+  #TODO: tmux
+  #TODO: vpn
 
 - name: "nuc"
   hosts: nuc
