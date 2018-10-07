@@ -1,0 +1,11 @@
+---
+# roles/common/tasks/macos.yml
+
+- name: "MacOS packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ common_packages_macos }}"
+  tags:
+    - packages
+    - macos

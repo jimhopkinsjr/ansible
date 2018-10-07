@@ -51,3 +51,10 @@
     - { role: "tmux", tags: "tmux" }
     - { role: "plex", tags: "plex" }
     - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
+
+- name: "ml1"
+  hosts: ml1
+  connection: ssh
+  become: false
+  roles:
+    - { role: "common", tags: "common" }

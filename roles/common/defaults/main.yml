@@ -1,7 +1,7 @@
 ---
 # roles/common/defaults/main.yml
 
-packages:
+common_packages_debian:
   - apt-config-auto-update
   - dnsutils
   - aptitude
@@ -11,3 +11,11 @@ packages:
   - mlocate
   - shellcheck
   - tree
+
+common_packages_macos:
+  - curl
+  - git
+  - git-cola
+  - shellcheck
+  - tree
+

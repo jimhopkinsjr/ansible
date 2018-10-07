@@ -1,8 +1,15 @@
 ---
 # roles/common/tasks/main.yml
 
-- name: "Debian plays."
+- name: "Debian tasks."
   import_tasks: debian.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   tags:
-  - ansible
+    - debian
+    - linux
+
+- name: "MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
+  tags:
+    - macos

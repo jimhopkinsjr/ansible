@@ -1,11 +1,13 @@
 ---
 # roles/common/tasks/debian.yml
 
-- name: "packages."
+- name: "Debian packages."
   package:
     name: "{{ item }}"
     state: latest
   become: true
-  with_items: "{{ packages }}"
+  with_items: "{{ common_packages_debian }}"
   tags:
     - packages
+    - debian
+    - linux
