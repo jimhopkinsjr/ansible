@@ -1,0 +1,6 @@
+---
+# roles/gcloud/defaults/main.yml
+
+gcloud_installdir: /opt/google
+gcloud_url_macos: https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-sdk-219.0.1-darwin-x86_64.tar.gz
+gcloud_checksum_macos: sha256:a21a1b7c074442840723d4fb443618b21aaa30e99783aca780be653b8a7bf815

@@ -1,0 +1,50 @@
+---
+# roles/gcloud/tasks/macos.yml
+
+- name: "MacOS | Install prerequisites."
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - python2
+    - gnu-tar
+  tags:
+  - packages
+
+- name: "MacOS | gtar link for prereqs."
+  file:
+    path: /usr/bin/tar
+    state: link
+    src: /usr/local/bin/gtar
+  become: true
+
+- name: "Create installation dir."
+  file:
+    path: "{{ gcloud_installdir }}"
+    state: "directory"
+  become: true
+
+- name: "Download archive."
+  get_url:
+    dest: "{{ downloads_dir }}/{{ gcloud_url_macos | urlsplit('path') | basename }}"
+    url: "{{ gcloud_url_macos }}"
+    checksum: "{{ gcloud_checksum_macos }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+
+- name: "Extract archive."
+  unarchive:
+    dest: "{{ gcloud_installdir }}"
+    src: "{{ downloads_dir }}/{{ gcloud_url_macos | urlsplit('path') | basename }}"
+    remote_src: yes
+    list_files: true
+  register: gcloud_archive_contents
+  become: true
+
+- name: "Add link to binary."
+  file:
+    path: "/usr/local/bin/gcloud"
+    state: link
+    src: "{{ gcloud_archive_contents.dest }}/{{ gcloud_archive_contents.files[0] }}/bin/gcloud"
+  become: true

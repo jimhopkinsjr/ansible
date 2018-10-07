@@ -1,33 +1,15 @@
 ---
 # roles/gcloud/tasks/main.yml
 
-- name: "Add apt key"
-  apt_key:
-    url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg "
-  become: true
+- name: "Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   tags:
-  - packages
+  - linux
+  - debian
 
-- name: "Install prerequisites for Debian."
-  package:
-    name: apt-transport-https
-    state: latest
-  become: true
+- name: "MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
   tags:
-  - packages
-
-- name: "Create apt repository."
-  apt_repository:
-    repo: "deb https://packages.cloud.google.com/apt cloud-sdk-stretch main"
-    state: present
-    filename: "google-cloud-sdk"
-  become: true
-  tags:
-  - packages
-
-- name: "Install."
-  package:
-    name: google-cloud-sdk
-  become: true
-  tags:
-  - packages
+  - macos
