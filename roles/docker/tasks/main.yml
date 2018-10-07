@@ -1,54 +1,15 @@
 ---
 # roles/docker/tasks/main.yml
 
-- name: "prerequisite packages"
-  package:
-    name: "{{ item }}"
-    state: latest
-  become: true
-  with_items: "{{ docker_prereqs }}"
+- name: "Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   tags:
-    - packages
+  - linux
+  - debian
 
-- name: "Add apt key"
-  apt_key:
-    url: "https://download.docker.com/linux/debian/gpg"
-  become: true
+- name: "MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
   tags:
-  - packages
-
-- name: "Add apt repo."
-  apt_repository:
-    repo: "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"
-    state: present
-    filename: "docker"
-  become: true
-  tags:
-  - packages
-
-- name: "package install."
-  package:
-    name: "docker-ce"
-    state: latest
-  become: true
-  tags:
-  - packages
-
-- name: "Enable service."
-  service:
-    name: "docker"
-    state: "started"
-    enabled: true
-  become: true
-  tags:
-  - services
-
-- name: "Add {{ username }} to docker group."
-  user:
-    name: "{{ username }}"
-    groups: "docker"
-    append: true
-  become: true
-  tags:
-  - users
-  - groups
+  - macos
