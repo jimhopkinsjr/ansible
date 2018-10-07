@@ -1,5 +1,5 @@
 ---
-# roles/awscli/tasks/macos.yml
+# roles/aws/tasks/macos.yml
 
 - name: "MacOS | Install package."
   package:

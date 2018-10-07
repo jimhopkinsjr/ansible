@@ -1,5 +1,5 @@
 ---
-# roles/awscli/tasks/main.yml
+# roles/aws/tasks/main.yml
 
 - name: "Debian tasks."
   import_tasks: debian.yml

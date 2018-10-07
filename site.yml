@@ -7,7 +7,7 @@
   roles:
     - { role: "common", tags: "common" }
     - { role: "ansible", tags: "ansible" }
-    - { role: "awscli", tags: "awscli" }
+    - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
     - { role: "docker", tags: "docker" }
     - { role: "sound", tags: "sound" }
@@ -60,4 +60,4 @@
     - { role: "common", tags: "common" }
     - { role: "bash", tags: "bash" }
     - { role: "ansible", tags: "ansible" }
-    - { role: "awscli", tags: "awscli" }
+    - { role: "aws", tags: "aws" }

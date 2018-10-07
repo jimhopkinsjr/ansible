@@ -1,5 +1,5 @@
 ---
-# roles/awscli/tasks/debian.yml
+# roles/aws/tasks/debian.yml
 
 - name: "Debian | Create install dir."
   file:
