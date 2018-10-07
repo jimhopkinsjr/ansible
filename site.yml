@@ -58,3 +58,4 @@
   become: false
   roles:
     - { role: "common", tags: "common" }
+    - { role: "bash", tags: "bash" }

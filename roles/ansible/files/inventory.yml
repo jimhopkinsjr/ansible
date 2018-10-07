@@ -4,13 +4,8 @@
 all:
   hosts:
     c60:
-    ml1:
     nuc:
-  vars:
-    group: "jpuellma"
-    homedir: "/home/{{ username }}"
-    downloads_dir: "/{{ homedir }}/Downloads"
-    username: "jpuellma"
+    ml1:
 
 
 #all:

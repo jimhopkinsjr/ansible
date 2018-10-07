@@ -8,6 +8,7 @@
     group: "{{ group }}"
     mode: "0444"
     src: "{{ item }}"
+    backup: yes
   with_items:
   - "bash_functions.sh"
   - "bashrc"

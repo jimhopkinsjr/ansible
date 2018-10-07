@@ -1,0 +1,7 @@
+---
+# roles/ansible/files/inventory.yml
+
+username: "james.puellmann"
+group: "staff"
+homedir: "/Users/{{ username }}"
+downloads_dir: "/{{ homedir }}/Downloads"
