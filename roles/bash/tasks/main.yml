@@ -3,13 +3,10 @@
 
 - name: "Copy files."
   copy:
-    dest: "{{ homedir }}/.{{ item }}"
+    dest: "{{ item.dest }}"
     owner: "{{ username }}"
     group: "{{ group }}"
     mode: "0444"
-    src: "{{ item }}"
+    src: "{{ item.src }}"
     backup: yes
-  with_items:
-  - "bash_functions.sh"
-  - "bashrc"
-  - "bash_prompt.sh"
+  with_items: "{{ bash_files }}"

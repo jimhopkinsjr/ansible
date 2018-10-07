@@ -1,51 +1,60 @@
 #!/usr/bin/env bash
 # .bashrc
+
 umask 022
 
-export BROWSER="/usr/bin/google-chrome --user-data-dir=${HOME}/.config/man"
-export EDITOR="/usr/bin/vim"
-export GOPATH="${HOME}/Go"
+export EDITOR="$(which vim || which vi)"
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=10000
 export HISTSIZE=10000
+export SDKMAN_DIR="${HOME}/.sdkman"
 export SPEC_OPTS="--format documentation"
 export SSLKEYLOGFILE="${HOME}/.sslkeylogfile"
 export SVN_EDITOR=/usr/bin/vim
 export VAGRANT_DEFAULT_PROVIDER='virtualbox'
 export brofist="👊"
-export rvm_path="${HOME}/.rvm"
 export shrug="¯\\_(ツ)_/¯"
 export thumbsup="👍"
 
 shopt -s checkwinsize
 shopt -s histappend
 
-# shellcheck source=/dev/null
 source "${HOME}/.bash_functions.sh"
 
-# shellcheck source=/dev/null
-source "${HOME}/.bash_prompt.sh"
-
 do_set_aliases
-do_set_dir_colors
-do_set_less_termcaps
-do_set_sparks
-do_set_tputs
 
-pathmunge "${GOPATH}:${GOPATH}/bin" after
-pathmunge "${HOME}/.rvm/bin" after
 pathmunge /opt/JetBrains/bin after
 pathmunge /opt/HashiCorp after
-pathmunge "${HOME}/anaconda3/bin" before
-
-complete -C /usr/local/bin/aws_completer aws
+pathmunge "${HOME}/.local/bin" after
+pathmunge "${HOME}/bin" after
 
 xrdb -merge ~/.Xresources 2>/dev/null || true
 
-# shellcheck source=/dev/null
-source ${HOME}/.credentials.sh 2>/dev/null || true
+for i in \
+    "${HOME}/.credentials.sh" \
+    "${HOME}/.sdkman/bin/sdkman-init.sh" \
 
-if (which kubectl >/dev/null); then
-# shellcheck source==/dev/null
-    source <(kubectl completion bash)
-fi
+do
+    [[ -s "${i}" ]] && source "${i}"
+done
+
+if is_interactive; then
+    do_set_dir_colors
+    do_set_less_termcaps
+    do_set_sparks
+    do_set_tputs
+    complete -C /usr/local/bin/aws_completer aws
+
+    if (which kubectl >/dev/null); then
+        source <(kubectl completion bash)
+    fi
+
+    for i in \
+        "${HOME}/.bash_prompt.sh" \
+        "${HOME}/.iterm2_shell_integration.bash" \
+        "/opt/google/google-cloud-sdk/completion.bash.inc" \
+
+    do
+        [[ -s "${i}" ]] && source "${i}"
+    done  # end for i in source files
+fi  # end if is_interactive

@@ -229,6 +229,21 @@ is_puppet_two() {
 }  # end is_puppet_two()
 
 
+is_interactive() {
+# Checks if the current shell is interactive.
+# Returns 0 if true, 1 if false.
+    log_debug "Begin."
+    local return_value
+    if [[ "$-" == *i* ]]; then
+        return_value=0
+    else
+        return_value=1
+    fi
+    log_debug "End. Returning \"${return_value}\"."
+    return ${return_value}
+}
+
+
 do_or_die() {
 # If the provided script exists, run it.
 # Otherwise, do nothing.

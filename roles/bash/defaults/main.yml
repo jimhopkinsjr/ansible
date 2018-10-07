@@ -1,0 +1,16 @@
+---
+# roles/bash/defaults/main.yml
+
+bash_files:
+  - name: "bash_profile"
+    src: "bash_profile"
+    dest: "{{ homedir }}/.bash_profile"
+  - name: "bash_functions.sh"
+    src: "bash_functions.sh"
+    dest: "{{ homedir }}/.bash_functions.sh"
+  - name: "bash_prompt.sh"
+    src: "bash_prompt.sh"
+    dest: "{{ homedir }}/.bash_prompt.sh"
+  - name: "bashrc"
+    src: "bashrc"
+    dest: "{{ homedir }}/.bashrc"
