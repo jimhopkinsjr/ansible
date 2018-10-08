@@ -1,0 +1,44 @@
+---
+# roles/intellij/tasks/debian.yml
+
+- name: "Debian | Create JetBrains install dir."
+  file:
+    path: "{{ jetbrains_installdir }}"
+    state: "directory"
+  become: true
+
+- name: "Debian | Download archive."
+  get_url:
+   dest: "{{ downloads_dir }}/{{ intellij_url_linux | urlsplit('path') | basename }}"
+   url: "{{ intellij_url_linux }}"
+   owner: "{{ username }}"
+   group: "{{ group }}"
+   mode: '0644'
+
+- name: "Debian | Intellij: Extract archive."
+  unarchive:
+   dest: "{{ jetbrains_installdir }}"
+   src: "{{ downloads_dir }}/{{ intellij_url_linux | urlsplit('path') | basename }}"
+   list_files: true
+  register: intellij_archive_contents
+  become: true
+
+- name: "Debian | Link ideaIC to extracted ideaIC version."
+  file:
+   path: "{{ jetbrains_installdir }}/ideaIC"
+   state: "link"
+   src: "{{ jetbrains_installdir }}/{{ intellij_archive_contents.files[0] | dirname }}"
+  become: true
+
+- name: "Debian | Link for launcher script."
+  file:
+   path: "/usr/local/bin/idea"
+   state: "link"
+   src: "{{ jetbrains_installdir }}/ideaIC/bin/idea.sh"
+  become: true
+
+- name: "Debian | Desktop launcher."
+  copy:
+    dest: "/usr/share/applications/jetbrains-idea-ce.desktop"
+    src: "jetbrains-idea-ce.desktop"
+  become: true

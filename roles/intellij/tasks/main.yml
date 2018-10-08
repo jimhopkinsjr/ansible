@@ -1,44 +1,16 @@
 ---
 # roles/intellij/tasks/main.yml
 
-- name: "Create JetBrains install dir."
-  file:
-    path: "{{ jetbrains_installdir }}"
-    state: "directory"
-  become: true
+- name: "Debian tasks."
+  import_tasks: debian.yml
+  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+  - linux
+  - debian
 
-- name: "Download archive."
-  get_url:
-   dest: "{{ downloads_dir }}/{{ intellij_url | urlsplit('path') | basename }}"
-   url: "{{ intellij_url }}"
-   owner: "{{ username }}"
-   group: "{{ group }}"
-   mode: '0644'
+- name: "MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
+  tags:
+  - macos
 
-- name: "Intellij: Extract archive."
-  unarchive:
-   dest: "{{ jetbrains_installdir }}"
-   src: "{{ downloads_dir }}/{{ intellij_url | urlsplit('path') | basename }}"
-   list_files: true
-  register: intellij_archive_contents
-  become: true
-
-- name: "Link ideaIC to extracted ideaIC version."
-  file:
-   path: "{{ jetbrains_installdir }}/ideaIC"
-   state: "link"
-   src: "{{ jetbrains_installdir }}/{{ intellij_archive_contents.files[0] | dirname }}"
-  become: true
-
-- name: "Link for launcher script."
-  file:
-   path: "/usr/local/bin/idea"
-   state: "link"
-   src: "{{ jetbrains_installdir }}/ideaIC/bin/idea.sh"
-  become: true
-
-- name: "Desktop launcher."
-  copy:
-    dest: "/usr/share/applications/jetbrains-idea-ce.desktop"
-    src: "jetbrains-idea-ce.desktop"
-  become: true

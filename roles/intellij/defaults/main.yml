@@ -2,3 +2,5 @@
 # roles/intellij/defaults/main.yml
 jetbrains_installdir: "/opt/JetBrains"
 intellij_url: "https://download.jetbrains.com/idea/ideaIC-2018.2.4.tar.gz"
+intellij_url_linux: "https://download.jetbrains.com/idea/ideaIC-2018.2.4.tar.gz"
+intellij_url_macos: "https://download.jetbrains.com/idea/ideaIC-2018.2.4.dmg"
