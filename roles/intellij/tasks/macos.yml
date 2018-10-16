@@ -35,5 +35,5 @@
   register: mount_dir
 
 - name: "MacOS | Unmount IntelliJ dmg."
-  command: "/usr/bin/hdiutil unmount \'/Volumes/IntelliJ IDEA CE/\'"
+  command: "/usr/bin/hdiutil unmount \"/Volumes/IntelliJ IDEA CE/\""
   when: mount_dir.stat.exists == true
