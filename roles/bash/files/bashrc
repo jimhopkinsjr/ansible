@@ -53,6 +53,7 @@ if is_interactive; then
         "${HOME}/.bash_prompt.sh" \
         "${HOME}/.iterm2_shell_integration.bash" \
         "/opt/google/google-cloud-sdk/completion.bash.inc" \
+        "/usr/local/etc/bash_completion" \
 
     do
         [[ -s "${i}" ]] && source "${i}"
