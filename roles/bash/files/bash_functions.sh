@@ -445,6 +445,9 @@ do_set_aliases() {
     alias tf=terraform
     alias tree='tree -C'
     alias vi='vim'
+
+    # Docker
+    alias cleanup='do_docker_cleanup'
 }  # end do_set_aliases
 
 
@@ -471,6 +474,25 @@ do_set_sparks() {
     export spark_percent_87='█'
 
     return 0
+}
+
+
+do_docker_cleanup() {
+# Does a few simple docker cleanup steps.
+# Returns sum of results of commands run.
+    log_debug "Begin."
+    local return_value=0
+
+
+    docker container prune -f
+    return_value=$(( return_value + $? ))
+    docker image prune -f
+    return_value=$(( return_value + $? ))
+    docker volume prune -f
+    return_value=$(( return_value + $? ))
+
+    log_debug "End. Returning \"${return_value}\"."
+    return ${return_value}
 }
 
 
