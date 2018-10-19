@@ -14,3 +14,7 @@
   tags:
   - macos
 
+- name: "Main | File copies."
+  copy:
+    dest: "{{ homedir }}/.ideavimrc"
+    src: "ideavimrc"
