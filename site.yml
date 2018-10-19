@@ -43,9 +43,9 @@
     - { role: "plex", tags: "plex" }
     - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
 
-- name: "ml1"
-  hosts: ml1
-  connection: ssh
+- name: "8wp"
+  hosts: 8wp
+  connection: local
   become: false
   roles:
     - { role: "common", tags: "common" }
