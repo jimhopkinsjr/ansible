@@ -1,6 +1,15 @@
 ---
 # roles/kubernetes/tasks/main.yml
 
-- name: "Debian tasks."
+- name: "Main | Debian tasks."
   import_tasks: debian.yml
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
+  tags:
+  - linux
+  - debian
+
+- name: "Main | MacOS tasks."
+  import_tasks: macos.yml
+  when: ansible_distribution == 'MacOSX'
+  tags:
+  - macos
