@@ -1,15 +1,5 @@
 ---
 # roles/aws/tasks/main.yml
 
-- name: "Debian tasks."
-  import_tasks: debian.yml
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-  - linux
-  - debian
-
-- name: "MacOS tasks."
-  import_tasks: macos.yml
-  when: ansible_distribution == 'MacOSX'
-  tags:
-  - macos
+- name: "Main | OS-specific includes."
+  include: "{{ ansible_distribution | lower }}.yml"
