@@ -10,6 +10,9 @@
   get_url:
     url: "{{ lastpass_url }}"
     dest: "{{ downloads_dir }}/lastpass/{{ lastpass_url | urlsplit('path') | basename }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
 
 - name: "Extract archive."
   unarchive:

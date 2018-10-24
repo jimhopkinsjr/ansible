@@ -13,6 +13,8 @@
   get_url:
     dest: "/usr/share/fonts/truetype/adobe"
     url: "{{ source_code_pro_font_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
     mode: '0644'
   become: true
   notify: "Update font cache."

@@ -5,6 +5,9 @@
   get_url:
     url: "{{ slack_url}}"
     dest: "{{ downloads_dir }}/{{ slack_url | urlsplit('path') | basename }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   tags:
   - packages

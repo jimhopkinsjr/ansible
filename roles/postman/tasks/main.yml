@@ -5,6 +5,9 @@
   get_url:
     url: "https://dl.pstmn.io/download/latest/linux64"
     dest: "{{ downloads_dir }}/postman.tgz"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
 
 - name: "Extract archive."
   unarchive:
