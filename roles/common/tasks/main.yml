@@ -1,5 +1,5 @@
 ---
 # roles/common/tasks/main.yml
 
-- name: "Main | OS-specific includes."
+- name: "Main | Includes"
   include: "{{ ansible_distribution | lower }}.yml"
