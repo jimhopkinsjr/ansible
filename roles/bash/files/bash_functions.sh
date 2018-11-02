@@ -445,6 +445,7 @@ do_set_aliases() {
     alias tf=terraform
     alias tree='tree -C'
     alias vi='vim'
+    alias slugify='slugify -d'
 
     # Docker
     alias cleanup='do_docker_cleanup'
