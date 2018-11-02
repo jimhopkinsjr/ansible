@@ -34,6 +34,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jacoborus/tender'
 Plugin 'jamessan/vim-gnupg'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'b4b4r07/vim-hcl'
 call vundle#end()
 
 set nocompatible
