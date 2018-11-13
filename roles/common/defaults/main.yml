@@ -18,4 +18,3 @@ common_packages_macos:
   - git-cola
   - shellcheck
   - tree
-
