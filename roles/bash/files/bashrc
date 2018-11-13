@@ -3,7 +3,7 @@
 
 umask 022
 
-export EDITOR="$(which vim || which vi)"
+EDITOR="$(command -v vim || command -v vi)" && export EDITOR
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=10000
 export HISTSIZE=10000
@@ -45,7 +45,7 @@ if is_interactive; then
     do_set_tputs
     complete -C /usr/local/bin/aws_completer aws
 
-    if (which kubectl >/dev/null); then
+    if (command -v kubectl >/dev/null); then
         source <(kubectl completion bash)
     fi
 
@@ -57,5 +57,24 @@ if is_interactive; then
 
     do
         [[ -s "${i}" ]] && source "${i}"
-    done  # end for i in source files
+    done  # end for i in interactive source files
+
+    case "${ITERM_PROFILE}" in
+        JMFS*)
+            JAVA_HOME=$(/usr/libexec/java_home -v 1.8 )&& export JAVA_HOME
+            AWS_PROFILE="jmfs.jpuellmann" && export AWS_PROFILE
+            ;;
+        WWT)
+            AWS_PROFILE="wwt.jpuellma" && export AWS_PROFILE
+            ;;
+        Personal)
+            AWS_PROFILE="personal.jpuellma" && export AWS_PROFILE
+            ;;
+        DEs)
+            AWS_PROFILE="asynchrony.des.james.puellmann" && export AWS_PROFILE
+            ;;
+        *)
+            AWS_PROFILE="" && export AWS_PROFILE
+            ;;
+    esac  # end case "${ITERM_PROFILE}
 fi  # end if is_interactive
