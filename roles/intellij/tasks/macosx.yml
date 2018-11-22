@@ -1,39 +1,7 @@
 ---
 # roles/intellij/tasks/macos.yml
 
-- name: "MacOS | Create JetBrains install dir."
-  file:
-    path: "{{ jetbrains_installdir }}"
-    state: "directory"
-  become: true
-
-- name: "MacOS | Download archive."
-  get_url:
-   dest: "{{ downloads_dir }}/{{ intellij_url_macos | urlsplit('path') | basename }}"
-   url: "{{ intellij_url_macos }}"
-   owner: "{{ username }}"
-   group: "{{ group }}"
-   mode: '0644'
-  register: download_status
-
-- name: "MacOS | Mount IntelliJ dmg."
-  command: "/usr/bin/hdiutil mount {{ downloads_dir }}/{{ intellij_url_macos | urlsplit('path') | basename }}"
-  when: download_status.changed == true
-
-- name: "Stat /Applications/IntelliJ IDEA CE.app"
-  stat:
-    path: "/Applications/IntelliJ IDEA CE.app"
-  register: appdir
-
-- name: "MacOS | Copy dmg contents to /Applications."
-  command: "cp -R \"/Volumes/IntelliJ IDEA CE/IntelliJ IDEA CE.app\" /Applications/"
-  when: appdir.stat.exists == false
-
-- name: "Stat IntelliJ Mount."
-  stat:
-    path: '/Volumes/IntelliJ IDEA CE'
-  register: mount_dir
-
-- name: "MacOS | Unmount IntelliJ dmg."
-  command: "/usr/bin/hdiutil unmount \"/Volumes/IntelliJ IDEA CE/\""
-  when: mount_dir.stat.exists == true
+- name: "MacOS | Install IntelliJ IDEA CE desktop app."
+  homebrew_cask:
+    name: intellij-idea-ce
+    state: latest
