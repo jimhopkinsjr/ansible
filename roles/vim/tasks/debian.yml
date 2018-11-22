@@ -1,0 +1,10 @@
+---
+# roles/vim/tasks/debian.yml
+
+- name: "install package."
+  package:
+    name: vim
+    state: latest
+  become: true
+  tags:
+    - packages

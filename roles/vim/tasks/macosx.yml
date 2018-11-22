@@ -1,0 +1,9 @@
+---
+# roles/vim/tasks/macosx.yml
+
+- name: "install package."
+  package:
+    name: vim
+    state: latest
+  tags:
+    - packages
