@@ -59,6 +59,22 @@
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
 
+- name: "c02"
+  hosts: c02
+  connection: local
+  become: false
+  roles:
+    - { role: "common", tags: "common" }
+    - { role: "bash", tags: "bash" }
+    - { role: "ansible", tags: "ansible" }
+    - { role: "aws", tags: "aws" }
+    - { role: "docker", tags: "docker" }
+    - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "gcloud", tags: "gcloud" }
+    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
+    - { role: "intellij", tags: "intellij" }
+    - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
+
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml
 #TODO: - import_tasks: plex.yml

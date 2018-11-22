@@ -14,6 +14,12 @@
     force: true
     backup: yes
 
+- name: "ansible dir"
+  file:
+    path: /etc/ansible
+    state: directory
+  become: true
+
 - name: "inventory file."
   copy:
     dest: "/etc/ansible/hosts"
