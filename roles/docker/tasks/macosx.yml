@@ -7,3 +7,10 @@
     state: latest
   tags:
   - packages
+
+- name: "MacOS | Docker desktop app install"
+  homebrew_cask:
+    name: "docker"
+    state: latest
+  tags:
+  - packages
