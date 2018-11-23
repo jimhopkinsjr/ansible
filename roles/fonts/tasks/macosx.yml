@@ -1,0 +1,18 @@
+---
+# roles/fonts/tasks/macosx.yml
+
+- name: "MacOS | Install homebrew fonts"
+  homebrew_cask:
+    name:
+      - homebrew/cask-fonts/font-sourcecodepro-nerd-font
+      - homebrew/cask-fonts/font-sourcecodepro-nerd-font-mono
+    state: latest
+
+- name: "MacOS | Download Source Code pro Fonts from Adobe"
+  get_url:
+    dest: "{{ downloads_dir }}"
+    url: "{{ source_code_pro_font_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+  become: true

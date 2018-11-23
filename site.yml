@@ -22,7 +22,7 @@
     - { role: "postgres", tags: [ "postgresql", "postgres" ] }
     - { role: "slack", tags: "slack" }
     - { role: "postman", tags: "postman" }
-    - { role: "source_code_font", tags: "source_code_font" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "terraform", tags: "terraform" }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
@@ -81,6 +81,7 @@
     - { role: "packer", tags: "packer" }
     - { role: "postman", tags: "postman" }
     - { role: "slack", tags: "slack" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "terraform", tags: ["terraform", "tf"] }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
