@@ -16,5 +16,6 @@ common_packages_macos:
   - curl
   - git
   - git-cola
+  - htop
   - shellcheck
   - tree

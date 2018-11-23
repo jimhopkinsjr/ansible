@@ -1,0 +1,5 @@
+---
+# roles/vmware/defaults/main.yml
+
+packages_macosx_casks:
+  - wireshark

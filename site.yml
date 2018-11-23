@@ -87,6 +87,7 @@
     - { role: "vim", tags: "vim" }
     - { role: "vmware", tags: "vmware" }
     - { role: "vivaldi", tags: "vivaldi" }
+    - { role: "wireshark", tags: "wireshark" }
 
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml
