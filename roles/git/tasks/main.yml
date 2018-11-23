@@ -1,0 +1,13 @@
+---
+# roles/git/tasks/main.yml
+
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"
+
+- name: "Main | gitconfig"
+  template:
+    dest: "{{ homedir }}/.gitconfig"
+    src: "gitconfig.j2"
+
+- debug:
+    var: group_name

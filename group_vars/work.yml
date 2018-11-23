@@ -1,0 +1,6 @@
+---
+# group_vars/work.yml
+
+git_user_name: James Puellmann
+git_user_email: james.puellmann@asynchrony.com
+

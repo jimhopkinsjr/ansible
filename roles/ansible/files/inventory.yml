@@ -2,11 +2,16 @@
 # roles/ansible/files/inventory.yml
 
 all:
-  hosts:
-    c60:
-    nuc:
-    ml1:
-    c02:
+  children:
+    work:
+      hosts:
+        8wp:
+        c02:
+        ml1:
+    home:
+      hosts:
+        c60:
+        nuc:
 
 
 #all:

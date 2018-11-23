@@ -65,20 +65,20 @@
   become: false
   roles:
     - { role: "common", tags: "common" }
-    - { role: "bash", tags: "bash" }
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
+    - { role: "bash", tags: "bash" }
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
+    - { role: "git", tags: "git" }
     - { role: "intellij", tags: "intellij" }
-    - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
-    - { role: "vim", tags: "vim" }
     - { role: "iterm2", tags: "iterm2" }
-    - { role: "vivaldi", tags: "vivaldi" }
+    - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "slack", tags: "slack" }
+    - { role: "vim", tags: "vim" }
+    - { role: "vivaldi", tags: "vivaldi" }
 
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml

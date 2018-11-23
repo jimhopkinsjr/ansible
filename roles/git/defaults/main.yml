@@ -1,0 +1,14 @@
+---
+# roles/git/defaults/main.yml
+
+git_packages_debian:
+  - debian-archive-keyring
+  - git
+  - git-cola
+  - git-lfs
+  - gitk
+
+git_packages_macos:
+  - git
+  - git-cola
+  - git-lfs

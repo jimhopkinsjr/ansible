@@ -1,6 +1,6 @@
 [user]
-	name = James Puellmann
-	email = james.puellmann@gmail.com
+	name = {{ git_user_name | default('Firstname Lastname') }}
+	email = {{ git_user_email | default('user@example.com') }}
 [core]
 	editor = vim
 [merge]
@@ -24,6 +24,7 @@
 	ci = commit
 	st = status
 	a = add
+	s = status
 [push]
 	default = simple
 [cola]

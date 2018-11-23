@@ -1,5 +1,5 @@
 ---
-# roles/ansible/files/inventory.yml
+# group_vars/all.yml
 
 username: "jpuellma"
 group: "jpuellma"

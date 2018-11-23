@@ -1,0 +1,6 @@
+---
+# group_vars/home.yml
+
+git_user_name: jpuellma
+git_user_email: jpuellma@gmail.com
+
