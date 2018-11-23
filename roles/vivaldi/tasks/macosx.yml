@@ -1,0 +1,7 @@
+---
+# roles/vivaldi/tasks/macosx.yml
+
+- name: "Install Vivaldi desktop app."
+  homebrew_cask:
+    name: vivaldi
+    state: latest
