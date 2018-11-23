@@ -63,6 +63,6 @@ function _new_update_ps1() {
     echo "PS1=\"${prompt_string}\""
 }
 
-export short_hostname=$(sed 's/.*\(...\)/\1/' <<< $HOSTNAME)
+export short_hostname=$(sed 's/.*\(...\)/\1/' <<< $HOSTNAME | tr '[:upper:]' '[:lower:]')
 
 PS1='\[\033[01;32m\]\u@${short_hostname}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
