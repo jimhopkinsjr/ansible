@@ -1,0 +1,10 @@
+---
+# roles/resize/tasks/macosx.yml
+
+- name: "MacOS | Install Easy Move+Resize app."
+  homebrew_cask:
+    name: "easy-move-plus-resize"
+    state: latest
+  tags:
+    - packages
+    - casks

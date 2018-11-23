@@ -80,6 +80,7 @@
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
     - { role: "postman", tags: "postman" }
+    - { role: "resize", tags: "resize" }
     - { role: "slack", tags: "slack" }
     - { role: "tcpdump", tags: "tcpdump" }
     - { role: "fonts", tags: "fonts" }
