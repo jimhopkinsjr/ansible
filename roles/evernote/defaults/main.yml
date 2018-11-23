@@ -1,5 +1,5 @@
 ---
-# roles/vmware/defaults/main.yml
+# roles/evernote/defaults/main.yml
 
 packages_macosx_casks:
   - evernote
