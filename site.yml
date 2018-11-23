@@ -82,6 +82,7 @@
     - { role: "terraform", tags: ["terraform", "tf"] }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
+    - { role: "vmware", tags: "vmware" }
     - { role: "vivaldi", tags: "vivaldi" }
 
 #TODO: - import_tasks: anyconnect.yml
