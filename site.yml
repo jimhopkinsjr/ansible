@@ -68,6 +68,7 @@
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
+    - { role: "datagrip", tags: "datagrip" }
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }

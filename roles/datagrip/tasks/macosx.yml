@@ -1,0 +1,7 @@
+---
+# roles/datagrip/tasks/macos.yml
+
+- name: "MacOS | Install DataGrip desktop app."
+  homebrew_cask:
+    name: datagrip
+    state: latest
