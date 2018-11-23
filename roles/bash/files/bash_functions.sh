@@ -418,6 +418,7 @@ do_set_aliases() {
     alias ecola='exec cola'
     alias gs='git status'
     alias gti='git'
+    alias gpoh='git push -u origin head'
 
     # vagrant
     alias v=vagrant
