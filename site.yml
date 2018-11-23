@@ -82,6 +82,7 @@
     - { role: "postman", tags: "postman" }
     - { role: "resize", tags: "resize" }
     - { role: "slack", tags: "slack" }
+    - { role: "spectacle", tags: "spectacle" }
     - { role: "tcpdump", tags: "tcpdump" }
     - { role: "fonts", tags: "fonts" }
     - { role: "terraform", tags: ["terraform", "tf"] }
