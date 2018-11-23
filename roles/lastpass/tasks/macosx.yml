@@ -1,0 +1,7 @@
+---
+# roles/lastpass/tasks/main.yml
+
+- name: "MacOS | Install LastPass CLI"
+  package:
+    name: lastpass-cli
+    state: latest

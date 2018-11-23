@@ -77,6 +77,7 @@
     - { role: "vim", tags: "vim" }
     - { role: "iterm2", tags: "iterm2" }
     - { role: "vivaldi", tags: "vivaldi" }
+    - { role: "lastpass", tags: "lastpass" }
 
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml
