@@ -75,6 +75,7 @@
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "vim", tags: "vim" }
+    - { role: "iterm2", tags: "iterm2" }
 
 #TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml

@@ -1,0 +1,7 @@
+---
+# roles/iterm2/tasks/macos.yml
+
+- name: "MacOS | Install iTerm2 desktop app."
+  homebrew_cask:
+    name: iterm2
+    state: latest
