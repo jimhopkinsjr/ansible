@@ -1,5 +1,5 @@
 ---
-# roles/wireshark/tasks/macosx.yml
+# roles/kindle/tasks/macosx.yml
 
 - name: "MacOS | Install desktop app."
   homebrew_cask:

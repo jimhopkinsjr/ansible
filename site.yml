@@ -80,6 +80,7 @@
     - { role: "insomnia", tags: "insomnia" }
     - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }
+    - { role: "kindle", tags: "kindle" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "oath", tags: "oath" }
