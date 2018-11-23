@@ -1,0 +1,9 @@
+---
+# roles/tcpdump/tasks/macosx.yml
+
+- name: "MacOS | Install packages."
+  package:
+    name: "{{ packages_macosx }}"
+    state: latest
+  tags:
+    - packages
