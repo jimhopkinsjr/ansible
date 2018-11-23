@@ -71,6 +71,7 @@
     - { role: "datagrip", tags: "datagrip" }
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "dropbox", tags: "dropbox" }
     - { role: "evernote", tags: "evernote" }
     - { role: "gcloud", tags: "gcloud" }
     - { role: "gnu-utils", tags: "gnu-utils" }
