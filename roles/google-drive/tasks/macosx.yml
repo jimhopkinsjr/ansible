@@ -1,0 +1,10 @@
+---
+# roles/google-drive/tasks/macosx.yml
+
+- name: "MacOS | Install desktop app."
+  homebrew_cask:
+    name: "{{ packages_macosx_casks }}"
+    state: latest
+  tags:
+    - packages
+    - casks

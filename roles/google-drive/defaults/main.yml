@@ -1,0 +1,5 @@
+---
+# roles/google-drive/defaults/main.yml
+
+packages_macosx_casks:
+  - google-drive-file-stream
