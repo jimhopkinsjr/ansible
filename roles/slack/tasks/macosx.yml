@@ -1,0 +1,7 @@
+---
+# roles/slack/tasks/macosx.yml
+
+- name: "MacOS | Install Slack desktop app."
+  homebrew_cask:
+    name: slack
+    state: latest

@@ -1,10 +1,7 @@
 ---
-# roles/slack/tasks/main.yml
+# roles/slack/tasks/mdebian.yml
 
-- name: "Main | Includes"
-  include: "{{ ansible_distribution | lower }}.yml"
-
-- name: "Download .deb."
+- name: "Debian | Download .deb."
   get_url:
     url: "{{ slack_url}}"
     dest: "{{ downloads_dir }}/{{ slack_url | urlsplit('path') | basename }}"
@@ -15,7 +12,7 @@
   tags:
   - packages
 
-- name: "Install .deb."
+- name: "Debian | Install .deb."
   apt:
     deb: "{{ downloads_dir }}/{{ slack_url | urlsplit('path') | basename }}"
   become: true
