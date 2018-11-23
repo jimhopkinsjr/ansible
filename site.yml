@@ -81,6 +81,7 @@
     - { role: "lastpass", tags: "lastpass" }
     - { role: "oath", tags: "oath" }
     - { role: "packer", tags: "packer" }
+    - { role: "parallels", tags: "parallels" }
     - { role: "postman", tags: "postman" }
     - { role: "resize", tags: "resize" }
     - { role: "slack", tags: "slack" }
