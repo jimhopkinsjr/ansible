@@ -1,0 +1,5 @@
+---
+# roles/insomnia/tasks/debian.yml
+
+- debug:
+    msg: "Role not yet implemented for Debian."

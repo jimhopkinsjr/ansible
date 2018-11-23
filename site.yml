@@ -73,6 +73,7 @@
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
     - { role: "git", tags: "git" }
+    - { role: "insomnia", tags: "insomnia" }
     - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
