@@ -74,6 +74,7 @@
     - { role: "dropbox", tags: "dropbox" }
     - { role: "evernote", tags: "evernote" }
     - { role: "gcloud", tags: "gcloud" }
+    - { role: "google-backup", tags: "google-backup" }
     - { role: "gnu-utils", tags: "gnu-utils" }
     - { role: "git", tags: "git" }
     - { role: "insomnia", tags: "insomnia" }
