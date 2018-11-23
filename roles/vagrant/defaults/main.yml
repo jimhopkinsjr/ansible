@@ -2,3 +2,11 @@
 # roles/vagrant/defaults/main.yml
 
 vagrant_deb_url: "https://releases.hashicorp.com/vagrant/2.1.5/vagrant_2.1.5_x86_64.deb"
+
+packages_macosx:
+  - vagrant-completion
+
+packages_macosx_casks:
+  - vagrant
+  - vagrant-manager
+  - vagrant-vmware-utility

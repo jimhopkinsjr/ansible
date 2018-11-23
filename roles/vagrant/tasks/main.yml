@@ -1,22 +1,5 @@
 ---
 # roles/vagrant/tasks/main.yml
 
-- name: "Download .deb package."
-  get_url:
-    dest: "{{ downloads_dir }}"
-    url: "{{ vagrant_deb_url }}"
-    owner: "{{ username }}"
-    group: "{{ group }}"
-    mode: '0644'
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-    - packages
-
-- name: "Install .deb."
-  apt:
-    deb: "{{ downloads_dir }}/{{ vagrant_deb_url | urlsplit('path') | basename }}"
-    state: present
-  become: true
-  when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-    - packages
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"

@@ -80,6 +80,7 @@
     - { role: "packer", tags: "packer" }
     - { role: "slack", tags: "slack" }
     - { role: "terraform", tags: ["terraform", "tf"] }
+    - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
 
