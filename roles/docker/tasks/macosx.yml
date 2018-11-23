@@ -3,7 +3,9 @@
 
 - name: "MacOS | Package install."
   package:
-    name: "docker"
+    name:
+      - docker
+      - docker-compose
     state: latest
   tags:
   - packages
