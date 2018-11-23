@@ -72,6 +72,7 @@
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
+    - { role: "gnu-utils", tags: "gnu-utils" }
     - { role: "git", tags: "git" }
     - { role: "insomnia", tags: "insomnia" }
     - { role: "intellij", tags: "intellij" }
