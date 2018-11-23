@@ -78,6 +78,7 @@
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "slack", tags: "slack" }
+    - { role: "terraform", tags: ["terraform", "tf"] }
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
 

@@ -1,0 +1,31 @@
+---
+# roles/terraform/tasks/debian.yml
+
+- name: "Create installation dir."
+  file:
+    path: "{{ terraform_installdir }}"
+    state: "directory"
+  become: true
+
+- name: "Download archive."
+  get_url:
+    dest: "{{ downloads_dir }}"
+    url: "{{ terraform_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+
+- name: "Extract archive."
+  unarchive:
+    dest: "{{ terraform_installdir }}"
+    src: "{{ downloads_dir }}/{{ terraform_url | urlsplit('path') | basename }}"
+    list_files: true
+  register: terraform_archive_contents
+  become: true
+
+- name: "Add link to binary."
+  file:
+    path: "/usr/local/bin/terraform"
+    state: link
+    src: "{{ terraform_archive_contents.dest }}/{{ terraform_archive_contents.files[0] }}"
+  become: true

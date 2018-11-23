@@ -1,0 +1,7 @@
+---
+# roles/terraform/tasks/main.yml
+
+- name: "MacOS | Install packages."
+  package:
+    name: "{{ packages_macosx }}"
+    state: latest
