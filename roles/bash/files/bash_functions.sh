@@ -419,6 +419,9 @@ do_set_aliases() {
     alias gs='git status'
     alias gti='git'
     alias gpoh='git push -u origin head'
+    alias ga.='git add .'
+    alias gc='git commit'
+    alias gcm='git commit -m'
 
     # vagrant
     alias v=vagrant
