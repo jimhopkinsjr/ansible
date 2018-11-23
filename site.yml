@@ -78,6 +78,7 @@
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
+    - { role: "postman", tags: "postman" }
     - { role: "slack", tags: "slack" }
     - { role: "terraform", tags: ["terraform", "tf"] }
     - { role: "vagrant", tags: "vagrant" }
