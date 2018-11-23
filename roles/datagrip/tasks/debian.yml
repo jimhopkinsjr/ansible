@@ -1,5 +1,0 @@
----
-# roles/datagrip/tasks/debian.yml
-
-- debug:
-    msg: "Datagrip role not implemented for Debian yet."

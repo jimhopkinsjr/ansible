@@ -1,5 +1,0 @@
----
-# roles/vmware/tasks/debian.yml
-
-- debug:
-  msg: "Role not yet implememnted for Debian."
