@@ -1,0 +1,5 @@
+---
+# roles/virtualbox/defaults/main.yml
+
+packages_macosx_casks:
+  - virtualbox
