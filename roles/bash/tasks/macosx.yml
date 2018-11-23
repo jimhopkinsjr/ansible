@@ -1,0 +1,9 @@
+---
+# roles/bash/tasks/macosx.yml
+
+- name: "MacOS | Install bash v4."
+  package:
+    name: bash
+    state: latest
+  tags:
+    - packages

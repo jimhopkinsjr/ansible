@@ -1,7 +1,10 @@
 ---
 # roles/bash/tasks/main.yml
 
-- name: "Copy files."
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"
+
+- name: "Main | Copy files."
   copy:
     dest: "{{ item.dest }}"
     owner: "{{ username }}"
