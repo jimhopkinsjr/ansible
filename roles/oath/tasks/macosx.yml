@@ -1,0 +1,10 @@
+---
+# roles/oath/tasks/macos.yml
+
+- name: "MacOS | Package install."
+  package:
+    name:
+      - oath-toolkit
+    state: latest
+  tags:
+  - packages

@@ -78,6 +78,7 @@
     - { role: "iterm2", tags: "iterm2" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
+    - { role: "oath", tags: "oath" }
     - { role: "packer", tags: "packer" }
     - { role: "postman", tags: "postman" }
     - { role: "resize", tags: "resize" }
