@@ -9,8 +9,6 @@
     group: "{{ group }}"
     mode: '0644'
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-    - packages
 
 - name: "Debian | Install .deb."
   apt:
@@ -18,5 +16,3 @@
     state: present
   become: true
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-    - packages

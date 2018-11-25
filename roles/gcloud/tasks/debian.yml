@@ -5,16 +5,12 @@
   apt_key:
     url: "https://packages.cloud.google.com/apt/doc/apt-key.gpg "
   become: true
-  tags:
-  - packages
 
 - name: "Debian | Install prerequisites."
   package:
     name: apt-transport-https
     state: latest
   become: true
-  tags:
-  - packages
 
 - name: "Debian | apt repo."
   apt_repository:
@@ -22,12 +18,8 @@
     state: present
     filename: "google-cloud-sdk"
   become: true
-  tags:
-  - packages
 
 - name: "Debian | Install"
   package:
     name: google-cloud-sdk
   become: true
-  tags:
-  - packages

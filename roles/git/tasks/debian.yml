@@ -6,9 +6,6 @@
     url: "https://packagecloud.io/github/git-lfs/gpgkey"
     state: present
   become: true
-  tags:
-    - git
-    - packages
 
 - name: "Debian | apt repository for git-lfs."
   apt_repository:
@@ -16,15 +13,9 @@
     state: present
     filename: "github_git-lfs"
   become: true
-  tags:
-    - git
-    - packages
 
 - name: "Debian | Install packages."
   apt:
     name: "{{ git_packages_debian }}"
     state: latest
   become: true
-  tags:
-    - git
-    - packages

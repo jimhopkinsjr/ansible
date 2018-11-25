@@ -5,5 +5,3 @@
   package:
     name: "{{ packages_macosx }}"
     state: latest
-  tags:
-    - packages

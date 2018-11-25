@@ -5,6 +5,3 @@
   package:
     name: "{{ git_lfs_packages_macos }}"
     state: latest
-  tags:
-  - git
-  - packages

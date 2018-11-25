@@ -5,5 +5,3 @@
   package:
     name: bash
     state: latest
-  tags:
-    - packages

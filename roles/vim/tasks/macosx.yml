@@ -5,13 +5,8 @@
   package:
     name: vim
     state: latest
-  tags:
-    - packages
 
 - name: "Install desktop app."
   homebrew_cask:
     name: macvim
     state: latest
-  tags:
-    - packages
-    - casks

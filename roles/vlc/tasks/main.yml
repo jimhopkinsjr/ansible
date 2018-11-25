@@ -7,5 +7,3 @@
     state: latest
   become: true
   with_items: "{{ vlc_packages }}"
-  tags:
-    - packages

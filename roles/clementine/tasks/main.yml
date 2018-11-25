@@ -6,5 +6,3 @@
     name: "clementine"
     state: latest
   become: true
-  tags:
-    - packages

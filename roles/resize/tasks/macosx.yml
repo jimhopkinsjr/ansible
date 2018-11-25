@@ -5,6 +5,3 @@
   homebrew_cask:
     name: "easy-move-plus-resize"
     state: latest
-  tags:
-    - packages
-    - casks

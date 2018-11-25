@@ -12,13 +12,9 @@
     group: "{{ group }}"
     mode: '0644'
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-  - packages
 
 - name: "Install .deb."
   apt:
     deb: "{{ downloads_dir }}/{{ slack_url | urlsplit('path') | basename }}"
   become: true
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-  - packages

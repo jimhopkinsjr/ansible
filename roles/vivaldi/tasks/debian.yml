@@ -8,8 +8,6 @@
     state: present
   become: true
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-  - packages
 
 - name: "Configure apt repo."
   apt_repository:
@@ -17,13 +15,9 @@
     state: present
     filename: vivaldi
   become: true
-  tags:
-  - packages
 
 - name: "Install."
   package:
     name: vivaldi-stable
     state: latest
   become: true
-  tags:
-  - packages

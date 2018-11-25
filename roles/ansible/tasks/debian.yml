@@ -9,14 +9,9 @@
     state: present
     filename: ansible
   become: true
-  tags:
-  - packages
 
 - name: "debian | package"
   package:
     name: "ansible"
     state: latest
   become: true
-  tags:
-  - packages
-

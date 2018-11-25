@@ -6,16 +6,12 @@
     name: "apt-transport-https"
     state: latest
   become: true
-  tags:
-    - packages
 
 - name: "apt repo key"
   apt_key:
     url: "https://downloads.plex.tv/plex-keys/PlexSign.key"
     state: present
   become: true
-  tags:
-  - packages
 
 - name: "apt repo"
   apt_repository:
@@ -23,8 +19,6 @@
     state: present
     filename: plex
   become: true
-  tags:
-  - packages
 
 - name: "Install packages."
   package:
@@ -32,8 +26,6 @@
       - plexmediaserver
     state: latest
   become: true
-  tags:
-    - packages
 
 - name: "service"
   service:

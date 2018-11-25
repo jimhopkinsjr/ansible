@@ -7,15 +7,11 @@
     state: latest
   become: true
   with_items: "{{ docker_prereqs }}"
-  tags:
-    - packages
 
 - name: "Debian | Apt gpg key"
   apt_key:
     url: "https://download.docker.com/linux/debian/gpg"
   become: true
-  tags:
-  - packages
 
 - name: "Debian | .deb repository"
   apt_repository:
@@ -23,16 +19,12 @@
     state: present
     filename: "docker"
   become: true
-  tags:
-  - packages
 
 - name: "Debian | Package install."
   package:
     name: "docker-ce"
     state: latest
   become: true
-  tags:
-  - packages
 
 - name: "Debian | Enable service."
   service:
@@ -40,8 +32,6 @@
     state: "started"
     enabled: true
   become: true
-  tags:
-  - services
 
 - name: "Debian | Add {{ username }} to docker group."
   user:
@@ -49,6 +39,3 @@
     groups: "docker"
     append: true
   become: true
-  tags:
-  - users
-  - groups

@@ -5,5 +5,3 @@
   package:
     name: "ansible"
     state: latest
-  tags:
-  - packages

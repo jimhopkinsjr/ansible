@@ -8,8 +8,6 @@
     id: ACCC4CF8
   become: true
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-  tags:
-    - packages
 
 - name: "apt repository."
   apt_repository:
@@ -18,8 +16,6 @@
     filename: postgresql
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
   become: true
-  tags:
-    - packages
 
 - name: "install."
   package:
@@ -30,6 +26,4 @@
     - postgresql-10
     - postgresql-client-10
   become: true
-  tags:
-    - packages
 

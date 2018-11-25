@@ -7,7 +7,3 @@
     state: latest
   become: true
   with_items: "{{ common_packages_debian }}"
-  tags:
-    - packages
-    - debian
-    - linux

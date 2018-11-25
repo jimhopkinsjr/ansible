@@ -4,5 +4,3 @@
 - name: "Update font cache."
   command: "/usr/bin/fc-cache"
   become: true
-  tags:
-  - fonts

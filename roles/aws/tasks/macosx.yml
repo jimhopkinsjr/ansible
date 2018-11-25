@@ -5,5 +5,3 @@
   package:
     name: awscli
     state: latest
-  tags:
-    - packages
