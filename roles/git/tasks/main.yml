@@ -8,6 +8,3 @@
   template:
     dest: "{{ homedir }}/.gitconfig"
     src: "gitconfig.j2"
-
-- debug:
-    var: group_name

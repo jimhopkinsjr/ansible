@@ -65,6 +65,7 @@
   become: false
   roles:
     - { role: "common", tags: "common" }
+    - { role: "1password", tags: "1password" }
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
