@@ -1,5 +1,0 @@
----
-# roles/git_lfs/tasks/main.yml
-
-- name: "Main | Includes"
-  include: "{{ ansible_distribution | lower }}.yml"

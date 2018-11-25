@@ -14,7 +14,6 @@
     - { role: "clementine", tags: "clementine" }
     - { role: "vlc", tags: "vlc" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
@@ -55,7 +54,6 @@
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "git_lfs", tags: [ "git_lfs", "git" ] }
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
 
