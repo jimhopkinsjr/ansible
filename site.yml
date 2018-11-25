@@ -76,6 +76,7 @@
     - { role: "gcloud", tags: "gcloud" }
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gnu-utils", tags: "gnu-utils" }
+    - { role: "gimp", tags: "gimp" }
     - { role: "git", tags: "git" }
     - { role: "insomnia", tags: "insomnia" }
     - { role: "intellij", tags: "intellij" }
