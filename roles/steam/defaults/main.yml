@@ -1,0 +1,8 @@
+---
+# roles/steam/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - steam
+      - steamcmd

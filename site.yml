@@ -72,6 +72,7 @@
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "dropbox", tags: "dropbox" }
     - { role: "evernote", tags: "evernote" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gnu-utils", tags: "gnu-utils" }
@@ -90,8 +91,8 @@
     - { role: "resize", tags: "resize" }
     - { role: "slack", tags: "slack" }
     - { role: "spectacle", tags: "spectacle" }
+    - { role: "steam", tags: "steam" }
     - { role: "tcpdump", tags: "tcpdump" }
-    - { role: "fonts", tags: "fonts" }
     - { role: "terraform", tags: ["terraform", "tf"] }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
@@ -100,14 +101,10 @@
     - { role: "vmware", tags: "vmware" }
     - { role: "wireshark", tags: "wireshark" }
 
-#TODO: - import_tasks: spotify.yml
-#TODO: - import_tasks: golang.yml
-#TODO: - import_tasks: python.yml
+#TODO: spotify
+#TODO: golang
+#TODO: python
 #TODO: powerline
-#TODO: tcpdump and wireshark
-#TODO: tmux
-#TODO: vpn
 #TODO: java/sdkman
 #TODO: replace common with regular roles
 #TODO: move dotifles resources to other roles
-#TODO: add steam

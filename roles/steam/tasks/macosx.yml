@@ -1,0 +1,8 @@
+---
+# roles/steam/tasks/macosx.yml
+
+- name: "MacOS | Install casks."
+  homebrew_cask:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.casks }}"
