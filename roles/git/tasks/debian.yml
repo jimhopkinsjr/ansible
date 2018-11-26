@@ -16,6 +16,7 @@
 
 - name: "Debian | Install packages."
   apt:
-    name: "{{ git_packages_debian }}"
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ packages.debian }}"

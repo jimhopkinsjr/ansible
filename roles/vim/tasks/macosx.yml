@@ -1,12 +1,14 @@
 ---
 # roles/vim/tasks/macosx.yml
 
-- name: "install package."
+- name: "MacOS | Install packages."
   package:
-    name: vim
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"
 
-- name: "Install desktop app."
+- name: "MacOS | Install desktop app."
   homebrew_cask:
-    name: macvim
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

@@ -1,16 +1,18 @@
 ---
 # roles/tcpdump/defaults/main.yml
 
-packages_macosx:
-  - coreutils
-  - findutils
-  - gawk
-  - gnu-getopt
-  - gnu-indent
-  - gnu-sed
-  - gnu-sed
-  - gnu-tar
-  - gnu-tar
-  - gnu-time
-  - gnutls
-  - grep
+packages:
+  macosx:
+    formulae:
+      - coreutils
+      - findutils
+      - gawk
+      - gnu-getopt
+      - gnu-indent
+      - gnu-sed
+      - gnu-sed
+      - gnu-tar
+      - gnu-tar
+      - gnu-time
+      - gnutls
+      - grep

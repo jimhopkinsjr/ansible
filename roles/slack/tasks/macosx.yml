@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install Slack desktop app."
   homebrew_cask:
-    name: slack
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

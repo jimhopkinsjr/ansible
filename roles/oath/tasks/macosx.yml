@@ -3,6 +3,6 @@
 
 - name: "MacOS | Package install."
   package:
-    name:
-      - oath-toolkit
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

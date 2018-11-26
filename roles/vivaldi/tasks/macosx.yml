@@ -1,7 +1,8 @@
 ---
 # roles/vivaldi/tasks/macosx.yml
 
-- name: "Install Vivaldi desktop app."
+- name: "MacOS | Install casks."
   homebrew_cask:
-    name: vivaldi
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

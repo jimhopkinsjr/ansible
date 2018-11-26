@@ -1,0 +1,8 @@
+---
+# roles/postgres/defaults/main.yml
+
+packages:
+  debian:
+    - pgadmin4
+    - postgresql-10
+    - postgresql-client-10

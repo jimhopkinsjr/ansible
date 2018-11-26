@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install iTerm2 desktop app."
   homebrew_cask:
-    name: iterm2
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

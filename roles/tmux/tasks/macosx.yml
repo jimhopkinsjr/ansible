@@ -1,0 +1,9 @@
+---
+# roles/tmux/tasks/macosx.yml
+
+- name: "install packages"
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.macosx.formulae }}"

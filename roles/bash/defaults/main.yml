@@ -1,6 +1,10 @@
 ---
 # roles/bash/defaults/main.yml
 
+packages:
+  macosx:
+    formulae:
+      - bash
 bash_files:
   - name: "bash_profile"
     src: "bash_profile"

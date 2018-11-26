@@ -1,5 +1,0 @@
----
-# roles/iterm2/tasks/debian.yml
-
-- debug:
-    msg: "Do nothing for Debian."

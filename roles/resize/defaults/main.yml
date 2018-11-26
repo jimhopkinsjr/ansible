@@ -1,0 +1,7 @@
+---
+# roles/presize/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - easy-move-plus-resize

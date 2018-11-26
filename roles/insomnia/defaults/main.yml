@@ -1,0 +1,7 @@
+---
+# roles/google-drive/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - insomnia

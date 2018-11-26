@@ -3,9 +3,10 @@
 
 - name: "Debian | Install prerequisites for Debian."
   apt:
-    name: apt-transport-https
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ prerequisites }}"
 
 - name: "Debian | Add apt key"
   apt_key:
@@ -19,8 +20,9 @@
     filename: "kubernetes"
   become: true
 
-- name: "Debian | Install."
+- name: "Debian | Install packages."
   apt:
-    name: "{{ packages }}"
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ packages.debian }}"

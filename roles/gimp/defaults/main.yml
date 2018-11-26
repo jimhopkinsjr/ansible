@@ -1,5 +1,7 @@
 ---
 # roles/gimp/defaults/main.yml
 
-packages_macosx_casks:
-  - gimp
+packages:
+  macosx:
+    casks:
+      - gimp

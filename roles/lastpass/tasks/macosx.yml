@@ -1,7 +1,8 @@
 ---
 # roles/lastpass/tasks/main.yml
 
-- name: "MacOS | Install LastPass CLI"
+- name: "MacOS | Install packages."
   package:
-    name: lastpass-cli
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

@@ -1,9 +1,5 @@
 ---
 # roles/vlc/tasks/main.yml
 
-- name: "package install."
-  package:
-    name: "{{ item }}"
-    state: latest
-  become: true
-  with_items: "{{ vlc_packages }}"
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"

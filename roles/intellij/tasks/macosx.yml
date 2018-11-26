@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install IntelliJ IDEA CE desktop app."
   homebrew_cask:
-    name: intellij-idea-ce
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

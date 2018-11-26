@@ -1,0 +1,6 @@
+---
+# roles/sound/defaults/main.yml
+
+packages:
+  debian:
+    - pavucontrol

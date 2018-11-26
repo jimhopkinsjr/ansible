@@ -1,8 +1,5 @@
 ---
 # roles/sound/tasks/main.yml
 
-- name: "package install."
-  package:
-    name: "pavucontrol"
-    state: latest
-  become: true
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"

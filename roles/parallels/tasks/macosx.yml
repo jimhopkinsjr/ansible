@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install desktop app."
   homebrew_cask:
-    name: "{{ packages_macosx_casks }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

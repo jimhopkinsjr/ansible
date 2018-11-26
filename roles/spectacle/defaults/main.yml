@@ -1,0 +1,7 @@
+---
+# roles/spectacle/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - spectacle

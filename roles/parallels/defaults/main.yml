@@ -1,5 +1,7 @@
 ---
 # roles/parallels/defaults/main.yml
 
-packages_macosx_casks:
-  - parallels
+packages:
+  macosx:
+    casks:
+      - parallels

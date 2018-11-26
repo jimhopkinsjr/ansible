@@ -1,0 +1,7 @@
+---
+# roles/oath/defaults/main.yml
+
+packages:
+  macosx:
+    formulae:
+      - oath-toolkit

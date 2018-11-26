@@ -3,10 +3,9 @@
 
 - name: "MacOS | Install homebrew fonts"
   homebrew_cask:
-    name:
-      - homebrew/cask-fonts/font-sourcecodepro-nerd-font
-      - homebrew/cask-fonts/font-sourcecodepro-nerd-font-mono
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"
 
 - name: "MacOS | Download Source Code pro Fonts from Adobe"
   get_url:

@@ -1,0 +1,11 @@
+---
+# roles/vim/defaults/main.yml
+
+packages:
+  debian:
+    - vim
+  macosx:
+    formulae:
+      - vim
+    casks:
+      - macvim

@@ -1,0 +1,10 @@
+---
+# roles/plex/defaults/main.yml
+
+prerequisites:
+  - apt-transport-https
+
+packages:
+  macosx:
+    casks:
+      - plexmediaserver

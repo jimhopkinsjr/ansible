@@ -1,7 +1,8 @@
 ---
 # roles/aws/tasks/macos.yml
 
-- name: "MacOS | Install package."
+- name: "MacOS | Install formulae."
   package:
-    name: awscli
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

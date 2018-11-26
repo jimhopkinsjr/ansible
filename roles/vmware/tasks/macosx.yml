@@ -1,7 +1,8 @@
 ---
-# roles/vagrant/tasks/macosx.yml
+# roles/vmware/tasks/macosx.yml
 
-- name: "MacOS | Install VMware Fusion Desktop app."
+- name: "MacOS | Install casks."
   homebrew_cask:
-    name: "{{ packages_macosx_casks }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

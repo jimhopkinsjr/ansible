@@ -1,12 +1,12 @@
 ---
 # roles/docker/tasks/debian.yml
 
-- name: "Debian | prerequisite packages"
+- name: "Debian | Install prerequisites."
   package:
     name: "{{ item }}"
     state: latest
   become: true
-  with_items: "{{ docker_prereqs }}"
+  with_items: "{{ prerequisites }}"
 
 - name: "Debian | Apt gpg key"
   apt_key:
@@ -20,11 +20,12 @@
     filename: "docker"
   become: true
 
-- name: "Debian | Package install."
+- name: "Debian | Install packages."
   package:
-    name: "docker-ce"
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ packages.debian }}"
 
 - name: "Debian | Enable service."
   service:

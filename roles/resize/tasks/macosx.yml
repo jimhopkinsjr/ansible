@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install Easy Move+Resize app."
   homebrew_cask:
-    name: "easy-move-plus-resize"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

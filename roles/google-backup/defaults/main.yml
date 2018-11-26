@@ -1,5 +1,7 @@
 ---
 # roles/google-backup/defaults/main.yml
 
-packages_macosx_casks:
-  - google-backup-and-sync
+packages:
+  macosx:
+    casks:
+      - google-backup-and-sync

@@ -1,7 +1,7 @@
 ---
 # roles/vivaldi/tasks/debian.yml
 
-- name: "Add apt key."
+- name: "Debian | Add apt key."
   apt_key:
     url: https://repo.vivaldi.com/stable/linux_signing_key.pub
     id: 6D3789EDC3401E12
@@ -9,15 +9,16 @@
   become: true
   when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
 
-- name: "Configure apt repo."
+- name: "Debian | Configure apt repo."
   apt_repository:
     repo: "deb http://repo.vivaldi.com/stable/deb/ stable main"
     state: present
     filename: vivaldi
   become: true
 
-- name: "Install."
+- name: "Debian | Install packages."
   package:
-    name: vivaldi-stable
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ packages.debian }}"

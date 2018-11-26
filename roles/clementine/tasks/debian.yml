@@ -1,0 +1,9 @@
+---
+# roles/clementine/tasks/main.yml
+
+- name: "Debian | Install packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.debian }}"

@@ -2,4 +2,5 @@
 # roles/bittorrent/defaults/main.yml
 
 packages:
- - deluge
+ debian:
+   - deluge

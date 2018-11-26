@@ -2,3 +2,7 @@
 # roles/lastpass/defaults/main.yml
 
 lastpass_url: "https://download.cloud.lastpass.com/linux/lplinux.tar.bz2"
+packages:
+  macosx:
+    formulae:
+      - lastpass-cli

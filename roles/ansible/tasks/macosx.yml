@@ -1,7 +1,8 @@
 ---
 # roles/ansible/tasks/macos.yml
 
-- name: "macos | homebrew package"
+- name: "MacOS | Install formulae."
   package:
-    name: "ansible"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

@@ -1,6 +1,8 @@
 ---
 # roles/1password/defaults/main.yml
 
-packages_macosx_casks:
-  - 1password
-  - 1password-cl1
+packages:
+  macosx:
+    casks:
+      - 1password
+      - 1password-cl1

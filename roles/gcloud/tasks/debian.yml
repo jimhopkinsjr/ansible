@@ -8,9 +8,10 @@
 
 - name: "Debian | Install prerequisites."
   package:
-    name: apt-transport-https
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ prerequisites }}"
 
 - name: "Debian | apt repo."
   apt_repository:
@@ -21,5 +22,6 @@
 
 - name: "Debian | Install"
   package:
-    name: google-cloud-sdk
+    name: "{{ item }}"
   become: true
+  with_items: "{{ packages.debian }}"

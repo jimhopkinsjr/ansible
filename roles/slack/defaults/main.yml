@@ -1,5 +1,10 @@
 ---
 # roles/slack/defaults/main.yml
 
+packages:
+  macosx:
+    casks:
+      - slack
+
 slack_deb_version: 3.3.3
 slack_url: "https://downloads.slack-edge.com/linux_releases/slack-desktop-{{ slack_deb_version }}-amd64.deb"

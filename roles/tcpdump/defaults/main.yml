@@ -1,5 +1,7 @@
 ---
 # roles/tcpdump/defaults/main.yml
 
-packages_macosx:
-  - tcpdump
+packages:
+  macosx:
+    formulae:
+      - tcpdump

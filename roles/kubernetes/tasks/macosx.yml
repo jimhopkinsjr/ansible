@@ -2,11 +2,13 @@
 # roles/kubernetes/tasks/debian.yml
 
 - name: "MacOS | Install packages."
-  homebrew:
-    name: "{{ packages_macos }}"
+  package:
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"
 
 - name: "MacOS | Install casks."
   homebrew_cask:
-    name: "{{ packages_macos_casks }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

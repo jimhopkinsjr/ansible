@@ -1,13 +1,16 @@
 ---
 # roles/kubernetes/defaults/main.yml
 
-packages_macos:
-  - kops
-  - kubernetes-cli
-  - kubernetes-helm
+packages:
+  debian:
+    - kubectl
+  macosx:
+    formulae:
+      - kops
+      - kubernetes-cli
+      - kubernetes-helm
+    casks:
+    - minikube
 
-packages_macos_casks:
-  - minikube
-
-packages_debian:
-  - kubectl
+prerequisites:
+  - apt-transport-https

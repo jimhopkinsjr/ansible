@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install packages."
   package:
-    name: "{{ packages_macosx }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

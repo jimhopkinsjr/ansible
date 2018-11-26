@@ -1,5 +1,7 @@
 ---
 # roles/vmware/defaults/main.yml
 
-packages_macosx_casks:
-  - kindle
+packages:
+  macosx:
+    casks:
+      - kindle

@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install packages."
   package:
-    name: "{{ git_packages_macos }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

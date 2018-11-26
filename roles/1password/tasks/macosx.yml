@@ -1,7 +1,8 @@
 ---
 # roles/1password/tasks/macosx.yml
 
-- name: "MacOS | Install desktop app."
+- name: "MacOS | Install packages."
   homebrew_cask:
-    name: "{{ packages_macosx_casks }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

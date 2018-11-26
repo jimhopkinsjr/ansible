@@ -1,0 +1,7 @@
+---
+# roles/datagrip/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - datagrip

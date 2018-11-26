@@ -1,0 +1,9 @@
+---
+# roles/vivaldi/defaults/main.yml
+
+packages:
+  debian:
+    - vivaldi-stable
+  macosx:
+    casks:
+      - vivaldi

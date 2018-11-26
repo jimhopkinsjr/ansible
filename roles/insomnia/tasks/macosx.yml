@@ -3,5 +3,6 @@
 
 - name: "MacOS | Install destkop app."
   homebrew_cask:
-    name: insomnia
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

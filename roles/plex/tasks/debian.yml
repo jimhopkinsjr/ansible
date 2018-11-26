@@ -1,33 +1,34 @@
 ---
 # roles/plex/tasks/debian.yml
 
-- name: "prerequisite packages."
+- name: "Debian | prerequisite packages."
   package:
-    name: "apt-transport-https"
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ prereequisites }}"
 
-- name: "apt repo key"
+- name: "Debian | apt repo key"
   apt_key:
     url: "https://downloads.plex.tv/plex-keys/PlexSign.key"
     state: present
   become: true
 
-- name: "apt repo"
+- name: "Debian | apt repo"
   apt_repository:
     repo: "deb https://downloads.plex.tv/repo/deb ./public main"
     state: present
     filename: plex
   become: true
 
-- name: "Install packages."
+- name: "Debian | Install packages."
   package:
-    name:
-      - plexmediaserver
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ prereequisites }}"
 
-- name: "service"
+- name: "Debian | service"
   service:
     name: "plexmediaserver"
     state: started

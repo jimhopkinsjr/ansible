@@ -1,8 +1,19 @@
 ---
 # roles/docker/defaults/main.yml
 
-docker_prereqs:
+prerequisites:
   - apt-transport-https
   - ca-certificates
   - software-properties-common
   - wget
+
+packages:
+  debian:
+    - docker-ce
+    - docker-compose
+  macosx:
+    formulae:
+      - docker
+      - docker-compose
+    casks:
+      - docker

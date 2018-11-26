@@ -1,7 +1,8 @@
 ---
 # roles/postman/tasks/macosx.yml
 
-- name: "MacOS | Install destkop app."
+- name: "MacOS | Install casks."
   homebrew_cask:
-    name: postman
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

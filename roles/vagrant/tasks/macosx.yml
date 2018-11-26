@@ -3,10 +3,12 @@
 
 - name: "MacOS | Install packages."
   package:
-    name: "{{ packages_macosx }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"
 
-- name: "MacOS | Install Desktop apps."
+- name: "MacOS | Install casks."
   homebrew_cask:
-    name: "{{ packages_macosx_casks }}"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

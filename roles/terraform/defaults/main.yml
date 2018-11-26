@@ -3,8 +3,11 @@
 
 terraform_installdir: "/opt/HashiCorp"
 terraform_url: "https://releases.hashicorp.com/terraform/0.11.8/terraform_0.11.8_linux_amd64.zip"
-packages_macosx:
-  - terraform
-  - terraform-inventory
-  - terraform-docs
-  - terraforming
+
+packages:
+  macosx:
+    formulae:
+      - terraform
+      - terraform-inventory
+      - terraform-docs
+      - terraforming

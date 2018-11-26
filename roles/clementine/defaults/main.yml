@@ -1,0 +1,6 @@
+---
+# roles/cclementine/defaults/main.yml
+
+packages:
+  debian:
+  - clementine

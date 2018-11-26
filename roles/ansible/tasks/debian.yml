@@ -10,8 +10,9 @@
     filename: ansible
   become: true
 
-- name: "debian | package"
+- name: "Debian | Install packages."
   package:
-    name: "ansible"
+    name: "{{ item }}"
     state: latest
   become: true
+  with_items: "{{ packages.debian }}"

@@ -1,7 +1,8 @@
 ---
 # roles/bash/tasks/macosx.yml
 
-- name: "MacOS | Install bash v4."
+- name: "MacOS | Install bash v4. for Mac."
   package:
-    name: bash
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"

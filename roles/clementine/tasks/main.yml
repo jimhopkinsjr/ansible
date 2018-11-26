@@ -1,8 +1,5 @@
 ---
 # roles/clementine/tasks/main.yml
 
-- name: "package install."
-  package:
-    name: "clementine"
-    state: latest
-  become: true
+- name: "Main | Includes"
+  include: "{{ ansible_distribution | lower }}.yml"

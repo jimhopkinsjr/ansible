@@ -1,7 +1,8 @@
 ---
 # roles/gcloud/tasks/macos.yml
 
-- name: " MacOS | Install Google Cloud SDK"
+- name: " MacOS | Install casks."
   homebrew_cask:
-    name: google-cloud-sdk
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

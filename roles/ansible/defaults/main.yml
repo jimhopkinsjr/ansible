@@ -1,2 +1,9 @@
 ---
 # roles/ansible/defaults/main.yml
+
+packages:
+  debian:
+    - ansible
+  macosx:
+    formulae:
+      - ansible

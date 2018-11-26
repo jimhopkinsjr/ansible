@@ -100,9 +100,7 @@
     - { role: "vmware", tags: "vmware" }
     - { role: "wireshark", tags: "wireshark" }
 
-#TODO: - import_tasks: anyconnect.yml
 #TODO: - import_tasks: spotify.yml
-#TODO: - import_tasks: plex.yml
 #TODO: - import_tasks: golang.yml
 #TODO: - import_tasks: python.yml
 #TODO: powerline
@@ -110,3 +108,6 @@
 #TODO: tmux
 #TODO: vpn
 #TODO: java/sdkman
+#TODO: replace common with regular roles
+#TODO: move dotifles resources to other roles
+#TODO: add steam

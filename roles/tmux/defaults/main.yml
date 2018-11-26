@@ -1,7 +1,13 @@
 ---
 # roles/tmux/defaults/main.yml
 
-tmux_packages:
-  - tmux
-  - tmux-plugin-manager
-  - tmuxinator
+packages:
+  debian:
+    - tmux
+    - tmux-plugin-manager
+    - tmuxinator
+  macosx:
+    formulae:
+      - tmux
+      - tmux-mem-cpu-load
+      - tmuxinator

@@ -2,3 +2,9 @@
 # roles/fonts/defaults/main.yml
 
 source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/releases/download/variable-fonts/SourceCodeVariable-Roman.ttf"
+
+packages:
+  macosx:
+    casks:
+      - homebrew/cask-fonts/font-sourcecodepro-nerd-font
+      - homebrew/cask-fonts/font-sourcecodepro-nerd-font-mono

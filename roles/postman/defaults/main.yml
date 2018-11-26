@@ -1,0 +1,7 @@
+---
+# roles/postman/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - postman

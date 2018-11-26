@@ -3,12 +3,12 @@
 
 - name: "MacOS | Package install."
   package:
-    name:
-      - docker
-      - docker-compose
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.formulae }}"
 
 - name: "MacOS | Docker desktop app install"
   homebrew_cask:
-    name: "docker"
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"

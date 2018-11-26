@@ -1,7 +1,8 @@
 ---
 # roles/datagrip/tasks/macos.yml
 
-- name: "MacOS | Install DataGrip desktop app."
+- name: "MacOS | Install casks."
   homebrew_cask:
-    name: datagrip
+    name: "{{ item }}"
     state: latest
+  with_items: "{{ packages.macosx.casks }}"
