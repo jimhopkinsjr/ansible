@@ -5,4 +5,4 @@
   homebrew_cask:
     name: "{{ item }}"
     state: latest
-  with_items: "{{ item.macosx.casks }}"
+  with_items: "{{ packages.macosx.casks }}"

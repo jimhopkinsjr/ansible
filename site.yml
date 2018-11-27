@@ -57,8 +57,8 @@
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
 
-- name: "c02"
-  hosts: c02
+- name: "v2r"
+  hosts: v2r
   connection: local
   become: false
   roles:

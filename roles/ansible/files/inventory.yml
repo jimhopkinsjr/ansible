@@ -6,7 +6,7 @@ all:
     work:
       hosts:
         8wp:
-        c02:
+        v2r:
         ml1:
     home:
       hosts:
