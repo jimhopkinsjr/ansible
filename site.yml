@@ -74,6 +74,7 @@
     - { role: "evernote", tags: "evernote" }
     - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
+    - { role: "golang", tags: "golang" }
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gnu-utils", tags: "gnu-utils" }
     - { role: "gimp", tags: "gimp" }
@@ -102,7 +103,6 @@
     - { role: "vmware", tags: "vmware" }
     - { role: "wireshark", tags: "wireshark" }
 
-#TODO: golang
 #TODO: python
 #TODO: powerline
 #TODO: java/sdkman

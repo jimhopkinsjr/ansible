@@ -1,0 +1,8 @@
+---
+# roles/golang/tasks/macosx.yml
+
+- name: "MacOS | Install formulae."
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.formulae }}"

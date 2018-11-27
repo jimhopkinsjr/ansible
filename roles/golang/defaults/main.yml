@@ -1,0 +1,7 @@
+---
+# roles/golang/defaults/main.yml
+
+packages:
+  macosx:
+    formulae:
+      - go
