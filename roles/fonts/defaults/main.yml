@@ -6,5 +6,6 @@ source_code_pro_font_url: "https://github.com/adobe-fonts/source-code-pro/releas
 packages:
   macosx:
     casks:
-      - homebrew/cask-fonts/font-sourcecodepro-nerd-font
-      - homebrew/cask-fonts/font-sourcecodepro-nerd-font-mono
+      - font-awesome-terminal-fonts
+      - font-source-code-pro
+      - font-source-code-pro-for-powerline
