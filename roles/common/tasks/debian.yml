@@ -1,7 +1,7 @@
 ---
 # roles/common/tasks/debian.yml
 
-- name: "Debian packages."
+- name: "Debian | Install packages."
   package:
     name: "{{ item }}"
     state: latest

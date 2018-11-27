@@ -1,8 +1,8 @@
 ---
-# roles/common/tasks/macos.yml
+# roles/common/tasks/macosx.yml
 
-- name: "MacOS packages."
+- name: "MacOS | Install packages."
   package:
     name: "{{ item }}"
     state: latest
-  with_items: "{{ common_packages_macos }}"
+  with_items: "{{ packages.macosx.formulae }}"
