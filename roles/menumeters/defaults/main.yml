@@ -1,0 +1,7 @@
+---
+# roles/menumeters/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - menumeters

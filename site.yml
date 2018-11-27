@@ -76,7 +76,6 @@
     - { role: "gcloud", tags: "gcloud" }
     - { role: "golang", tags: "golang" }
     - { role: "google-backup", tags: "google-backup" }
-    - { role: "shell-utils", tags: "shell-utils" }
     - { role: "gimp", tags: "gimp" }
     - { role: "git", tags: "git" }
     - { role: "insomnia", tags: "insomnia" }
@@ -90,6 +89,7 @@
     - { role: "parallels", tags: "parallels" }
     - { role: "postman", tags: "postman" }
     - { role: "resize", tags: "resize" }
+    - { role: "shell-utils", tags: "shell-utils" }
     - { role: "slack", tags: "slack" }
     - { role: "spectacle", tags: "spectacle" }
     - { role: "spotify", tags: "spotify" }
