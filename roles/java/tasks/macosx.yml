@@ -1,0 +1,13 @@
+---
+# roles/java/tasks/macosx.yml
+
+- name: "MacOS | Taps"
+  homebrew_tap:
+    name: caskroom/versions
+    state: present
+
+- name: "MacOS | Install casks."
+  homebrew_cask:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.casks }}"

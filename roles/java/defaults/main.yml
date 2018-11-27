@@ -1,0 +1,8 @@
+---
+# roles/java/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - java
+      - java8
