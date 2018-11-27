@@ -5,6 +5,8 @@ packages:
   macosx:
     formulae:
       - bash
+      - bash-completion
+
 bash_files:
   - name: "bash_profile"
     src: "bash_profile"
