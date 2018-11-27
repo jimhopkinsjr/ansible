@@ -103,8 +103,5 @@
     - { role: "vmware", tags: "vmware" }
     - { role: "wireshark", tags: "wireshark" }
 
-#TODO: python
-#TODO: powerline
-#TODO: java/sdkman
 #TODO: replace common with regular roles
 #TODO: move dotifles resources to other roles
