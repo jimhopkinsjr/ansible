@@ -1,0 +1,7 @@
+---
+# roles/spotify/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - spotify

@@ -91,6 +91,7 @@
     - { role: "resize", tags: "resize" }
     - { role: "slack", tags: "slack" }
     - { role: "spectacle", tags: "spectacle" }
+    - { role: "spotify", tags: "spotify" }
     - { role: "steam", tags: "steam" }
     - { role: "tcpdump", tags: "tcpdump" }
     - { role: "terraform", tags: ["terraform", "tf"] }
@@ -101,7 +102,6 @@
     - { role: "vmware", tags: "vmware" }
     - { role: "wireshark", tags: "wireshark" }
 
-#TODO: spotify
 #TODO: golang
 #TODO: python
 #TODO: powerline
