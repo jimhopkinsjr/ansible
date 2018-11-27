@@ -1,0 +1,30 @@
+---
+# roles/shell-utils/defaults/main.yml
+
+packages:
+  macosx:
+    formulae:
+      - calc
+      - ccrypt
+      - coreutils
+      - dos2unix
+      - findutils
+      - gawk
+      - gnu-getopt
+      - gnu-indent
+      - gnu-sed
+      - gnu-tar
+      - gnu-time
+      - gnutls
+      - grep
+      - htop
+      - jq
+      - links
+      - lynx
+      - nmap
+      - tcptraceroute
+      - tree
+      - unrar
+      - vimpager
+      - watch
+      - wget
