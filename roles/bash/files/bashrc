@@ -45,13 +45,10 @@ if is_interactive; then
     do_set_tputs
     complete -C /usr/local/bin/aws_completer aws
 
-    if (command -v kubectl >/dev/null); then
-        source <(kubectl completion bash)
-    fi
-
     for i in \
         "${HOME}/.bash_prompt.sh" \
         "${HOME}/.iterm2_shell_integration.bash" \
+        "${HOME}/.kube/kubectl-completion.sh" \
         "/opt/google/google-cloud-sdk/completion.bash.inc" \
         "/usr/local/etc/bash_completion" \
 

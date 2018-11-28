@@ -12,3 +12,11 @@
     name: "{{ item }}"
     state: latest
   with_items: "{{ packages.macosx.casks }}"
+
+- name: "MacOS | Config files."
+  copy:
+    dest: "{{ homedir }}/.kube/kubectl-completion.sh"
+    src: kubectl-completion.sh
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: 0444
