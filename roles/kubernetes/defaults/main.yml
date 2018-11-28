@@ -9,6 +9,7 @@ packages:
       - kops
       - kubernetes-cli
       - kubernetes-helm
+      - kubespy
     casks:
     - minikube
 
