@@ -9,6 +9,11 @@
     dest: "{{ homedir }}/.vimrc"
     src: "vimrc"
 
+- name: .vimpagerrc
+  copy:
+    dest: "{{ homedir }}/.vimpagerrc"
+    src: "vimpagerrc"
+
 - name: "Create vim bundle dir."
   file:
     path: "{{ homedir }}/.vim/bundle"

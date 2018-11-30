@@ -15,7 +15,14 @@ export VAGRANT_DEFAULT_PROVIDER='virtualbox'
 export brofist="👊"
 export shrug="¯\\_(ツ)_/¯"
 export thumbsup="👍"
-command -v vimpager &> /dev/null && export PAGER=vimpager
+
+if command -v vimpager &>/dev/null; then
+    if [[ -f ${HOME}/.vimpagerrc ]]; then
+        export PAGER="vimpager -u ${HOME}/.vimpagerrc"
+    else
+        export PAGER="vimpager"
+    fi
+fi
 
 shopt -s checkwinsize
 shopt -s histappend
