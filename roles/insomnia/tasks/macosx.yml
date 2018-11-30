@@ -1,7 +1,7 @@
 ---
 # roles/insomnia/tasks/macosx.yml
 
-- name: "MacOS | Install destkop app."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

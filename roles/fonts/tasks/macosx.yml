@@ -1,7 +1,7 @@
 ---
 # roles/fonts/tasks/macosx.yml
 
-- name: "MacOS | Install homebrew fonts"
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

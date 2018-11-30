@@ -1,7 +1,7 @@
 ---
 # roles/postman/tasks/macosx.yml
 
-- name: "MacOS | Install casks."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

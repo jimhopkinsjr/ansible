@@ -6,7 +6,7 @@
     name: caskroom/versions
     state: present
 
-- name: "MacOS | Install casks."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

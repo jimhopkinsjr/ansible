@@ -1,7 +1,7 @@
 ---
 # roles/spectacle/tasks/macosx.yml
 
-- name: "MacOS | Install app."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

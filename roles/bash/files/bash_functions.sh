@@ -411,20 +411,18 @@ do_set_aliases() {
 
     # git
     alias g=git
-    alias gs='git diff'
-    alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-    alias gs='git status'
-    alias gst='git status'
-    alias gg='git gui &'
     alias cola='nohup git cola >/dev/null 2>&1 & '
     alias ecola='exec cola'
-    alias gs='git status'
-    alias gti='git'
-    alias gp='git pull'
-    alias gpoh='git push -u origin head'
     alias ga.='git add .'
     alias gc='git commit'
     alias gcm='git commit -m'
+    alias gd='PAGER=less git diff'
+    alias gl='PAGER=less git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
+    alias gp='git pull'
+    alias gpoh='git push -u origin head'
+    alias gs='git status'
+    alias gst='git status'
+    alias gti='git'
 
     # vagrant
     alias v=vagrant

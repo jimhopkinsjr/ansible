@@ -1,7 +1,7 @@
 ---
 # roles/intellij/tasks/macos.yml
 
-- name: "MacOS | Install IntelliJ IDEA CE desktop app."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest

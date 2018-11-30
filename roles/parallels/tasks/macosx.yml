@@ -1,7 +1,7 @@
 ---
 # roles/parallels/tasks/macosx.yml
 
-- name: "MacOS | Install desktop app."
+- name: "MacOS | casks"
   homebrew_cask:
     name: "{{ item }}"
     state: latest
