@@ -1,4 +1,5 @@
 " runtime path
+" vim: set filetype=vim:
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
