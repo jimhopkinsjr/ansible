@@ -373,7 +373,7 @@ do_set_aliases() {
 
     uname_a=$(uname -a)
 
-    # OS-specific:
+    # Environment-specific:
     case $(uname -a) in
         Darwin*)
             alias idea='open -a "IntelliJ IDEA CE.app"'
@@ -383,6 +383,7 @@ do_set_aliases() {
             alias grep='/usr/bin/grep --color=always'
             alias updatedb='/usr/libexec/locate.updatedb'
             alias less='less -RFX'
+            alias cdsvn='cd ~/svn'
             alias openssl1='/usr/local/Cellar/openssl@1.1/1.1.0h/bin/openssl'
             ;;
         *Linux*)
@@ -392,6 +393,7 @@ do_set_aliases() {
             alias grep='/bin/grep --color=always'
             alias ip='ip -4'
             alias less='less -RFX'
+            alias cdsvn='cd ~/svn'
             alias tree='tree -c'
             alias cr='cmus-remote'
             alias crplay='cmus-remote --play' crp='crplay'
@@ -405,10 +407,11 @@ do_set_aliases() {
             ;;
         * )
             ;;
-    esac  # end case $(uname -a)
+    esac
 
     # git
     alias g=git
+    alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
     alias gs='git status'
     alias gst='git status'
     alias gg='git gui &'
@@ -435,9 +438,9 @@ do_set_aliases() {
     alias thumbsup='echo ${thumbsup}'
 
     # Misc
+    alias ..='cd ..'
     alias b=brightness
     alias batterysaver='~/bin/setbrightness 60 && ~/bin/cpu s'
-    alias cd='do_changedir'
     alias d-c='docker-compose'
     alias gcal='sudo gcalcli'
     alias gerp='grep'
@@ -477,21 +480,7 @@ do_set_sparks() {
     export spark_percent_87='█'
 
     return 0
-}  # nd do_set_sparks()
-
-
-do_changedir() {
-# Replace 'cd' and 'cd -' with pushd and popd.
-    log_debug "Begin."
-
-    if [ "$1" = "-" ]; then
-        popd
-    else
-        pushd "$*"
-    fi
-
-    log_debug "End."
-}  # end do_changedir()
+}
 
 
 do_docker_cleanup() {
