@@ -411,6 +411,7 @@ do_set_aliases() {
 
     # git
     alias g=git
+    alias gs='git diff'
     alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
     alias gs='git status'
     alias gst='git status'
