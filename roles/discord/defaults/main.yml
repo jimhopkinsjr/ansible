@@ -1,0 +1,7 @@
+---
+# roles/discord/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - discord
