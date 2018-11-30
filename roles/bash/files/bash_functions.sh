@@ -419,6 +419,7 @@ do_set_aliases() {
     alias ecola='exec cola'
     alias gs='git status'
     alias gti='git'
+    alias gp='git pull'
     alias gpoh='git push -u origin head'
     alias ga.='git add .'
     alias gc='git commit'
