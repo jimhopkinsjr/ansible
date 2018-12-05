@@ -15,7 +15,7 @@ call vundle#begin()
 
 Bundle 'gmarik/Vundle.vim'
 Bundle 'ervandew/supertab'
-Bundle 'bronson/vim-trailing-whitespace'
+"Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'vim-scripts/xoria256.vim'
 Bundle 'vim-scripts/ctrlp.vim'
 Bundle 'vim-scripts/ZoomWin'
