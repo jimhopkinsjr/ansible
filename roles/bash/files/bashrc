@@ -35,6 +35,9 @@ pathmunge /opt/JetBrains/bin after
 pathmunge /opt/HashiCorp after
 pathmunge "${HOME}/.local/bin" after
 pathmunge "${HOME}/bin" after
+if [[ -d /Applications/Postgres.app/Contents/Versions/latest/bin ]]; then
+    pathmunge /Applications/Postgres.app/Contents/Versions/latest/bin after
+fi
 
 xrdb -merge ~/.Xresources 2>/dev/null || true
 
