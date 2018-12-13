@@ -417,12 +417,11 @@ do_set_aliases() {
     alias g=git
     alias gd='git diff'
     alias gl='git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit'
-    alias gs='git status'
+    alias gs='git status -s -b'
     alias gst='git status'
     alias gg='git gui &'
     alias cola='nohup git cola >/dev/null 2>&1 & '
     alias ecola='exec cola'
-    alias gs='git status'
     alias gti='git'
     alias gp='git pull'
     alias gpoh='git push -u origin head'
