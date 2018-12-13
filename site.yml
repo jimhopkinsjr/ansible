@@ -75,10 +75,11 @@
     - { role: "evernote", tags: "evernote" }
     - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "golang", tags: "golang" }
-    - { role: "google-backup", tags: "google-backup" }
     - { role: "gimp", tags: "gimp" }
     - { role: "git", tags: "git" }
+    - { role: "golang", tags: "golang" }
+    - { role: "google-backup", tags: "google-backup" }
+    - { role: "gradle", tags: "gradle" }
     - { role: "insomnia", tags: "insomnia" }
     - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }

@@ -1,0 +1,7 @@
+---
+# roles/gradle/defaults/main.yml
+
+packages:
+  macosx:
+    formulae:
+      - gradle

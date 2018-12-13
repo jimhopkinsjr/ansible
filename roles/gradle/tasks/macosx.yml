@@ -1,0 +1,8 @@
+---
+# roles/gradle/tasks/macosx.yml
+
+- name: "MacOS | Package install."
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.formulae }}"
