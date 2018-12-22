@@ -424,7 +424,7 @@ do_set_aliases() {
     alias ecola='exec cola'
     alias gti='git'
     alias gp='git pull'
-    alias gpoh='git push -u origin head'
+    alias gpoh='git push -u origin HEAD'
     alias ga.='git add .'
     alias gc='git commit'
     alias gcm='git commit -m'
