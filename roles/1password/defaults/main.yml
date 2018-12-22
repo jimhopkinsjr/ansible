@@ -6,3 +6,7 @@ packages:
     casks:
       - 1password
       - 1password-cl1
+
+onepassword_cli_version: 0.5.4
+onepassword_cli_url: "https://cache.agilebits.com/dist/1P/op/pkg/v{{ onepassword_cli_version }}/op_linux_amd64_v{{ onepassword_cli_version }}.zip"
+onepassword_cli_installdir: /opt/onepassword
