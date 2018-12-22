@@ -456,6 +456,7 @@ do_set_aliases() {
     alias tree='tree -C'
     alias vi='vim'
     alias slugify='slugify -d'
+    alias cola='QT_SCALE_FACTOR=1.5 git-cola'
 
     # Docker
     alias cleanup='do_docker_cleanup'
