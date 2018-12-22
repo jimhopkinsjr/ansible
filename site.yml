@@ -5,30 +5,30 @@
   connection: local
   become: false
   roles:
-    - { role: "common", tags: "common" }
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
-    - { role: "docker", tags: "docker" }
-    - { role: "sound", tags: "sound" }
+    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
     - { role: "clementine", tags: "clementine" }
-    - { role: "vlc", tags: "vlc" }
+    - { role: "common", tags: "common" }
+    - { role: "docker", tags: "docker" }
+    - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
     - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
     - { role: "postgres", tags: [ "postgresql", "postgres" ] }
-    - { role: "slack", tags: "slack" }
     - { role: "postman", tags: "postman" }
-    - { role: "fonts", tags: "fonts" }
+    - { role: "slack", tags: "slack" }
+    - { role: "sound", tags: "sound" }
     - { role: "terraform", tags: "terraform" }
+    - { role: "tmux", tags: "tmux" }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
-    - { role: "tmux", tags: "tmux" }
-    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
-    - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "vlc", tags: "vlc" }
 
 - name: "nuc"
   hosts: nuc
