@@ -15,7 +15,7 @@
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
@@ -54,7 +54,7 @@
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
 
 - name: "v2r"
@@ -81,7 +81,7 @@
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gradle", tags: "gradle" }
     - { role: "insomnia", tags: "insomnia" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }
     - { role: "java", tags: "java" }
     - { role: "kindle", tags: "kindle" }
