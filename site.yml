@@ -6,6 +6,9 @@
   become: false
   roles:
     - { role: "ansible", tags: "ansible" }
+    - { role: "bash", tags: "bash" }
+    - { role: "vivaldi", tags: "vivaldi" }
+
 - name: "c60"
   hosts: c60
   connection: local
