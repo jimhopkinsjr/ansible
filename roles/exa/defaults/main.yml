@@ -1,0 +1,9 @@
+---
+# roles/exa/defaults/main.yml
+
+packages:
+  fedora:
+    - exa
+  macosx:
+    formulae:
+      - exa

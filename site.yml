@@ -7,6 +7,7 @@
   roles:
     - { role: "ansible", tags: "ansible" }
     - { role: "bash", tags: "bash" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "vivaldi", tags: "vivaldi" }
 
 - name: "c60"
