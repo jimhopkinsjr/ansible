@@ -1,5 +1,11 @@
 ---
 # site.yml
+- name: "c14"
+  hosts: c14
+  connection: local
+  become: false
+  roles:
+    - { role: "ansible", tags: "ansible" }
 - name: "c60"
   hosts: c60
   connection: local

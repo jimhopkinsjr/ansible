@@ -1,0 +1,12 @@
+---
+# roles/ansible/tasks/fedora.yml
+
+# This doesn't really work because 2.4 is needed to properly filter the vars
+# so it needs to be manually installed before these plays are run anyway.
+
+- name: "Fedora | Install packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.fedora }}"

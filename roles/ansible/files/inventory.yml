@@ -11,32 +11,5 @@ all:
     home:
       hosts:
         c60:
+        c14:
         nuc:
-
-
-#all:
-#  children:
-#    work:
-#      hosts:
-#        ml1:
-#    home:
-#      hosts:
-#        c60:
-#        nuc:
-#linux:
-#  hosts:
-#    c60:
-#    nuc:
-#
-#macos:
-#  hosts:
-#    ml1:
-#
-#laptops:
-#  hosts:
-#    c60:
-#    ml1:
-#
-#media_servers:
-#  hosts:
-#    nuc:

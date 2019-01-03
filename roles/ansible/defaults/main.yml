@@ -4,6 +4,9 @@
 packages:
   debian:
     - ansible
+  fedora:
+    - ansible
+    - libselinux-python
   macosx:
     formulae:
       - ansible
