@@ -40,11 +40,6 @@ pwgrep() {
 }
 
 
-timestamp() {
-  date --iso-8601=seconds
-}
-
-
 reverse_array() {
 # Input: An array of strings, separated by whitespace.
 # Output: The same array, reversed.
@@ -456,6 +451,7 @@ do_set_aliases() {
     alias tree='tree -C'
     alias vi='vim'
     alias slugify='slugify -d'
+    alias timestamp='date +%Y-%m-%d_%H%M%S'
 
     # Docker
     alias cleanup='do_docker_cleanup'
