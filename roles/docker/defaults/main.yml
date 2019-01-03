@@ -8,6 +8,9 @@ prerequisites:
   - wget
 
 packages:
+  fedora:
+    - docker
+    - docker-compose
   debian:
     - docker-ce
     - docker-compose

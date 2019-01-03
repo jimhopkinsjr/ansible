@@ -1,0 +1,29 @@
+---
+# roles/docker/tasks/fedora.yml
+
+- name: "Fedora | Install packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.fedora }}"
+
+- name: "Fedora | Enable service."
+  service:
+    name: "docker"
+    state: "started"
+    enabled: true
+  become: true
+
+- name: "Fedora | Create docker user group."
+  group:
+    name: docker
+    state: present
+  become: true
+
+- name: "Fedora | Add {{ username }} to docker group."
+  user:
+    name: "{{ username }}"
+    groups: "docker"
+    append: true
+  become: true
