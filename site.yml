@@ -9,6 +9,7 @@
     - { role: "bash", tags: "bash" }
     - { role: "exa", tags: "exa" }
     - { role: "fonts", tags: "fonts" }
+    - { role: "steam", tags: "steam" }
     - { role: "vivaldi", tags: "vivaldi" }
 
 - name: "c60"
