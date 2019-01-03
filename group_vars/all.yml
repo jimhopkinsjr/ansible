@@ -5,3 +5,4 @@ username: "jpuellma"
 group: "jpuellma"
 homedir: "/home/{{ username }}"
 downloads_dir: "/{{ homedir }}/Downloads"
+onepassword_cli_version: 0.5.4

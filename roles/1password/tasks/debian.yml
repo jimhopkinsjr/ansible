@@ -1,0 +1,31 @@
+---
+# roles/1password/tasks/debian.yml
+
+- name: "Debian | Create install dir."
+  file:
+    path: "{{ onepassword_cli_installdir }}"
+    state: "directory"
+  become: true
+
+- name: "Debian | Download archive."
+  get_url:
+    dest: "{{ downloads_dir }}/{{ onepassword_cli_url | urlsplit('path') | basename }}"
+    url: "{{ onepassword_cli_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+
+- name: "Debian | Extract archive."
+  unarchive:
+    dest: "{{ onepassword_cli_installdir }}"
+    src: "{{ downloads_dir }}/{{ onepassword_cli_url | urlsplit('path') | basename }}"
+    list_files: true
+  register: onepassword_cli_archive_contents
+  become: true
+
+- name: "Debian | Link to executable."
+  file:
+    path: "/usr/local/bin/op"
+    state: "link"
+    src: "{{ onepassword_cli_installdir }}/op"
+  become: true

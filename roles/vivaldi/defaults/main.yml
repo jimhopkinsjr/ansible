@@ -4,6 +4,8 @@
 packages:
   debian:
     - vivaldi-stable
+  fedora:
+    - vivaldi-stable
   macosx:
     casks:
       - vivaldi

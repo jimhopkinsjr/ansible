@@ -419,7 +419,7 @@ do_set_aliases() {
     alias ecola='exec cola'
     alias gti='git'
     alias gp='git pull'
-    alias gpoh='git push -u origin head'
+    alias gpoh='git push -u origin HEAD'
     alias ga.='git add .'
     alias gc='git commit'
     alias gcm='git commit -m'
@@ -452,6 +452,7 @@ do_set_aliases() {
     alias vi='vim'
     alias slugify='slugify -d'
     alias timestamp='date +%Y-%m-%d_%H%M%S'
+    alias cola='QT_SCALE_FACTOR=1.5 git-cola'
 
     # Docker
     alias cleanup='do_docker_cleanup'

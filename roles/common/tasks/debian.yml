@@ -6,4 +6,4 @@
     name: "{{ item }}"
     state: latest
   become: true
-  with_items: "{{ common_packages_debian }}"
+  with_items: "{{ packages.debian }}"

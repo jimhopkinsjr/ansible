@@ -1,34 +1,48 @@
 ---
 # site.yml
+- name: "c14"
+  hosts: c14
+  connection: local
+  become: false
+  roles:
+    - { role: "ansible", tags: "ansible" }
+    - { role: "bash", tags: "bash" }
+    - { role: "docker", tags: "docker" }
+    - { role: "exa", tags: "exa" }
+    - { role: "fonts", tags: "fonts" }
+    - { role: "steam", tags: "steam" }
+    - { role: "vivaldi", tags: "vivaldi" }
+
 - name: "c60"
   hosts: c60
   connection: local
   become: false
   roles:
-    - { role: "common", tags: "common" }
+    - { role: "1password", tags: "1password" }
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
-    - { role: "docker", tags: "docker" }
-    - { role: "sound", tags: "sound" }
+    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
     - { role: "clementine", tags: "clementine" }
-    - { role: "vlc", tags: "vlc" }
+    - { role: "common", tags: "common" }
+    - { role: "docker", tags: "docker" }
+    - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "fonts", tags: "fonts" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "packer", tags: "packer" }
     - { role: "postgres", tags: [ "postgresql", "postgres" ] }
-    - { role: "slack", tags: "slack" }
     - { role: "postman", tags: "postman" }
-    - { role: "fonts", tags: "fonts" }
+    - { role: "slack", tags: "slack" }
+    - { role: "sound", tags: "sound" }
     - { role: "terraform", tags: "terraform" }
+    - { role: "tmux", tags: "tmux" }
     - { role: "vagrant", tags: "vagrant" }
     - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
-    - { role: "tmux", tags: "tmux" }
-    - { role: "bittorrent", tags: [ "bittorrent", "torrent"] }
-    - { role: "dotfiles", tags: "dotfiles" }
+    - { role: "vlc", tags: "vlc" }
 
 - name: "nuc"
   hosts: nuc
@@ -54,7 +68,7 @@
     - { role: "docker", tags: "docker" }
     - { role: "dotfiles", tags: "dotfiles" }
     - { role: "gcloud", tags: "gcloud" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
 
 - name: "v2r"
@@ -81,7 +95,7 @@
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gradle", tags: "gradle" }
     - { role: "insomnia", tags: "insomnia" }
-    - { role: "intellij", tags: "intellij" }
+    # - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }
     - { role: "java", tags: "java" }
     - { role: "kindle", tags: "kindle" }

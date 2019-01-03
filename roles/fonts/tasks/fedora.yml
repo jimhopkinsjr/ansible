@@ -1,0 +1,18 @@
+---
+# roles/fonts/tasks/fedora.yml
+
+- name: "Fedora | Make fonts download dir."
+  file:
+    path: "/usr/share/fonts/truetype/adobe"
+    state: "directory"
+  become: true
+
+- name: "Fedora | Download Source Code pro Fonts from Adobe"
+  get_url:
+    dest: "/usr/share/fonts/truetype/adobe"
+    url: "{{ source_code_pro_font_url }}"
+    owner: "{{ username }}"
+    group: "{{ group }}"
+    mode: '0644'
+  become: true
+  notify: "Update font cache."

@@ -1,0 +1,9 @@
+---
+# roles/steam/tasks/fedora.yml
+
+- name: "Feora | casks"
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.fedora }}"
+  become: true
