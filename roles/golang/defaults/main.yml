@@ -2,6 +2,8 @@
 # roles/golang/defaults/main.yml
 
 packages:
+  fedora:
+    - golang
   macosx:
     formulae:
       - go

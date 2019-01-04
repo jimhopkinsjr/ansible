@@ -1,0 +1,9 @@
+---
+# roles/golang/tasks/fedora.yml
+
+- name: "Fedora | packages"
+  package:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.fedora }}"
+  become: yes
