@@ -1,0 +1,36 @@
+---
+# roles/prometheus/tasks/fedora.yml
+
+- name: 'Fedora | Add yum repo.'
+  yum_repository:
+    name: prometheus
+    description: Prometheus yum repo
+    baseurl: https://packagecloud.io/prometheus-rpm/release/el/7/$basearch
+  become: yes
+
+- name: "Fedora | Install packages."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.fedora }}"
+
+- name: "Fedora | Enable service."
+  service:
+    name: "prometheus"
+    state: "started"
+    enabled: true
+  become: true
+
+#- name: "Fedora | Create docker user group."
+#  group:
+#    name: docker
+#    state: present
+#  become: true
+#
+#- name: "Fedora | Add {{ username }} to docker group."
+#  user:
+#    name: "{{ username }}"
+#    groups: "docker"
+#    append: true
+#  become: true

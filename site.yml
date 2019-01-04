@@ -10,6 +10,7 @@
     - { role: "docker", tags: "docker" }
     - { role: "exa", tags: "exa" }
     - { role: "fonts", tags: "fonts" }
+    - { role: "prometheus", tags: "prometheus" }
     - { role: "steam", tags: "steam" }
     - { role: "vivaldi", tags: "vivaldi" }
 

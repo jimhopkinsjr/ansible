@@ -1,0 +1,15 @@
+---
+# roles/docker/defaults/main.yml
+
+prerequisites:
+  - apt-transport-https
+  - ca-certificates
+  - software-properties-common
+  - wget
+
+packages:
+  fedora:
+    - prometheus
+  macosx:
+    formulae:
+      - prometheus
