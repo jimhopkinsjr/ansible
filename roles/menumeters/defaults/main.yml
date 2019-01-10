@@ -4,4 +4,4 @@
 packages:
   macosx:
     casks:
-      - menumeters
+      - yujitach-menumeters

@@ -1,7 +1,7 @@
 ---
-# roles/menumeters/tasks/macosx.yml
+# roles/menumeters/tasks/main.yml
 
-- name: "MacOS | casks"
+- name: "macosx | Install packages."
   homebrew_cask:
     name: "{{ item }}"
     state: latest
