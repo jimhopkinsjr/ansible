@@ -104,6 +104,7 @@
     - { role: "kindle", tags: "kindle" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
+    - { role: "menumeters", tags: "menumeters" }
     - { role: "oath", tags: "oath" }
     - { role: "packer", tags: "packer" }
     - { role: "parallels", tags: "parallels" }
