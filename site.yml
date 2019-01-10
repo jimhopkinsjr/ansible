@@ -83,6 +83,7 @@
     - { role: "ansible", tags: "ansible" }
     - { role: "aws", tags: "aws" }
     - { role: "bash", tags: "bash" }
+    - { role: "clementine", tags: "clementine" }
     - { role: "datagrip", tags: "datagrip" }
     - { role: "discord", tags: "discord" }
     - { role: "docker", tags: "docker" }
