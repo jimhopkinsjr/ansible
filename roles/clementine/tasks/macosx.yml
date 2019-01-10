@@ -1,0 +1,8 @@
+---
+# roles/clementine/tasks/main.yml
+
+- name: "macosx | Install packages."
+  homebrew_cask:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.casks }}"

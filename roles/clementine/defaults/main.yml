@@ -3,4 +3,7 @@
 
 packages:
   debian:
-  - clementine
+    - clementine
+  macosx:
+    casks:
+      - clementine
