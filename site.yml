@@ -102,6 +102,7 @@
     - { role: "iterm2", tags: "iterm2" }
     - { role: "java", tags: "java" }
     - { role: "kindle", tags: "kindle" }
+    - { role: "krisp", tags: "krisp" }
     - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "lastpass", tags: "lastpass" }
     - { role: "menumeters", tags: "menumeters" }
