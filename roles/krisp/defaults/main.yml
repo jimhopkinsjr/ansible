@@ -1,0 +1,7 @@
+---
+# roles/krisp/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - krisp
