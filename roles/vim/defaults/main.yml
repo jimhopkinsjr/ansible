@@ -2,6 +2,8 @@
 # roles/vim/defaults/main.yml
 
 packages:
+  fedora:
+    - vim-enhanced
   debian:
     - vim
   macosx:

@@ -1,0 +1,9 @@
+---
+# roles/vim/tasks/fedora.yml
+
+- name: "Fedora | install package."
+  package:
+    name: "{{ item }}"
+    state: latest
+  become: true
+  with_items: "{{ packages.fedora }}"
