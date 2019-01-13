@@ -13,6 +13,7 @@
     - { role: "golang", tags: "golang" }
     - { role: "prometheus", tags: "prometheus" }
     - { role: "steam", tags: "steam" }
+    - { role: "vim", tags: "vim" }
     - { role: "vivaldi", tags: "vivaldi" }
 
 - name: "c60"
