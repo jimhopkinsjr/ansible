@@ -1,5 +1,5 @@
 ---
-# roles/kubernetes/tasks/debian.yml
+# roles/kubernetes/tasks/macosx.yml
 
 - name: "MacOS | packages"
   package:
