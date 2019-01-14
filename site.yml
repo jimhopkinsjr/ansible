@@ -11,6 +11,7 @@
     - { role: "exa", tags: "exa" }
     - { role: "fonts", tags: "fonts" }
     - { role: "golang", tags: "golang" }
+    - { role: "kubernetes", tags: [ "kubernetes", "k8s" ] }
     - { role: "prometheus", tags: "prometheus" }
     - { role: "steam", tags: "steam" }
     - { role: "vim", tags: "vim" }
