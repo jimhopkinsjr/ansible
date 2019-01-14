@@ -1,6 +1,17 @@
 ---
 # roles/kubernetes/tasks/fedora.yml
 
+- name: "Enable copr repo for minikube."
+  yum_repository:
+    name: 'minikube'
+    description: "Copr repo for minikube-rpm owned by antonpatsev"
+    baseurl: "https://copr-be.cloud.fedoraproject.org/results/antonpatsev/minikube-rpm/fedora-27-$basearch/"
+    state: present
+    gpgcheck: yes
+    gpgkey: https://copr-be.cloud.fedoraproject.org/results/antonpatsev/minikube-rpm/pubkey.gpg
+
+  become: yes
+
 - name: "Fedora | Install packages."
   package:
     name: "{{ item }}"

@@ -4,6 +4,7 @@
 packages:
   fedora:
     - kubernetes
+    - minikube
   debian:
     - kubectl
   macosx:
