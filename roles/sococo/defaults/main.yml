@@ -1,0 +1,7 @@
+---
+# roles/sococo/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - sococo

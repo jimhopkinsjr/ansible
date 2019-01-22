@@ -1,0 +1,8 @@
+---
+# roles/sococo/tasks/macosx.yml
+
+- name: "MacOS | casks"
+  homebrew_cask:
+    name: "{{ item }}"
+    state: latest
+  with_items: "{{ packages.macosx.casks }}"
