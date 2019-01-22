@@ -1,0 +1,7 @@
+---
+# roles/hyperswitch/defaults/main.yml
+
+packages:
+  macosx:
+    casks:
+      - hyperswitch
