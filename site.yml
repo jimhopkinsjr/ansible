@@ -99,6 +99,7 @@
     - { role: "golang", tags: "golang" }
     - { role: "google-backup", tags: "google-backup" }
     - { role: "gradle", tags: "gradle" }
+    - { role: "hyperswitch", tags: "hyperswitch" }
     - { role: "insomnia", tags: "insomnia" }
     # - { role: "intellij", tags: "intellij" }
     - { role: "iterm2", tags: "iterm2" }
@@ -115,6 +116,7 @@
     - { role: "resize", tags: "resize" }
     - { role: "shell-utils", tags: "shell-utils" }
     - { role: "slack", tags: "slack" }
+    - { role: "sococo", tags: "sococo" }
     - { role: "spectacle", tags: "spectacle" }
     - { role: "spotify", tags: "spotify" }
     - { role: "steam", tags: "steam" }
