@@ -71,7 +71,8 @@ if is_interactive; then
         JMFS*)
             JAVA_HOME=$(/usr/libexec/java_home -v 11 )&& export JAVA_HOME
             # AWS_PROFILE="jmfs.jpuellmann" && export AWS_PROFILE
-            AWS_PROFILE="jmfs.james.puellmann" && export AWS_PROFILE
+            AWS_PROFILE="501925964695_heimdall-admin" && export AWS_PROFILE
+
             ;;
         WWT)
             AWS_PROFILE="wwt.jpuellma" && export AWS_PROFILE
