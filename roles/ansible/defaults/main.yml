@@ -10,3 +10,4 @@ packages:
   macosx:
     formulae:
       - ansible
+      - ansible-lint
