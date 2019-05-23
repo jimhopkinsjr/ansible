@@ -1,7 +1,7 @@
 ---
 # roles/bash/tasks/macosx.yml
 
-- name: "MacOS | Install bash v4. for Mac."
+- name: "MacOS | Install homebrewed bash."
   package:
     name: "{{ item }}"
     state: latest

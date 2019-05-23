@@ -423,6 +423,9 @@ do_set_aliases() {
     alias ga.='git add .'
     alias gc='git commit'
     alias gcm='git commit -m'
+    alias gf='git fetch'
+    alias gr='git rebase'
+    alias rebase='git rebase'
 
     # vagrant
     alias v=vagrant
