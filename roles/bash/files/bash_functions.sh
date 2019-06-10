@@ -509,6 +509,12 @@ do_docker_cleanup() {
     return ${return_value}
 }
 
+anyconnect_reset() {
+# Find all PIDs associated with Cisco AnyConnect garbage and kill them.
+    pids=$(\ps aux | \grep anyco | \awk '{print $2}')
+    sudo kill -9 $pids 2>/dev/null
+}
+
 
 # Only invoke main() if we were NOT sourced.
 # This allows other scripts to source this file and cherry-pick function calls.

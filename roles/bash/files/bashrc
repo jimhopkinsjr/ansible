@@ -77,6 +77,9 @@ if is_interactive; then
         WWT)
             AWS_PROFILE="wwt.jpuellma" && export AWS_PROFILE
             ;;
+        WWT\ Multicloud)
+            AWS_PROFILE="wwt.multicloud" && export AWS_PROFILE
+            ;;
         Personal)
             AWS_PROFILE="personal.jpuellma" && export AWS_PROFILE
             ;;
