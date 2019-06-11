@@ -429,6 +429,7 @@ do_set_aliases() {
     alias fetch='git fetch'
     alias gr='git rebase'
     alias rebase='git rebase'
+    alias far='fetch && rebase'
 
     # vagrant
     alias v=vagrant
