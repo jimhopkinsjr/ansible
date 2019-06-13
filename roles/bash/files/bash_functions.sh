@@ -460,6 +460,7 @@ do_set_aliases() {
     alias slugify='slugify -d'
     alias timestamp='date +%Y-%m-%d_%H%M%S'
     alias cola='QT_SCALE_FACTOR=1.5 git-cola'
+    alias credentials='vim ~/.aws/credentials'
 
     # Docker
     alias cleanup='do_docker_cleanup'
