@@ -461,6 +461,7 @@ do_set_aliases() {
     alias timestamp='date +%Y-%m-%d_%H%M%S'
     alias cola='QT_SCALE_FACTOR=1.5 git-cola'
     alias credentials='vim ~/.aws/credentials'
+    alias hac='heimdall aws-creds --max-session-duration-seconds=43200'
 
     # Docker
     alias cleanup='do_docker_cleanup'
