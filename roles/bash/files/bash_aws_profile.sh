@@ -35,6 +35,8 @@ case "${TERM_PROGRAM}" in
                 AWS_PROFILE="asynchrony.des.james.puellmann" && export AWS_PROFILE ;;
             sce)
                 AWS_PROFILE="366238733069_FullAdmin_Marketplace" && export AWS_PROFILE ;;
+            tf-aws-cp)
+                AWS_PROFILE="asynchrony.des.james.puellmann" && export AWS_PROFILE ;;
             *)
                 AWS_PROFILE="none" ;;
         esac  # end case "${VSWORKSPACE}"
