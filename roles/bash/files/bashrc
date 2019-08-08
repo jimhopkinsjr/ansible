@@ -11,10 +11,11 @@ export SDKMAN_DIR="${HOME}/.sdkman"
 export SPEC_OPTS="--format documentation"
 export SSLKEYLOGFILE="${HOME}/.sslkeylogfile"
 export SVN_EDITOR=/usr/bin/vim
-export VAGRANT_DEFAULT_PROVIDER='virtualbox'
+export VAGRANT_DEFAULT_PROVIDER='docker'
 export brofist="👊"
 export shrug="¯\\_(ツ)_/¯"
 export thumbsup="👍"
+export ANSIBLE_NOCOWS=1
 
 if command -v vimpager &>/dev/null; then
     if [[ -f ${HOME}/.vimpagerrc ]]; then
@@ -38,6 +39,7 @@ pathmunge "${HOME}/bin" after
 if [[ -d /Applications/Postgres.app/Contents/Versions/latest/bin ]]; then
     pathmunge /Applications/Postgres.app/Contents/Versions/latest/bin after
 fi
+pathmunge /usr/local/pks/bin
 
 xrdb -merge ~/.Xresources 2>/dev/null || true
 
@@ -62,6 +64,7 @@ if is_interactive; then
         "${HOME}/.kube/kubectl-completion.sh" \
         "/opt/google/google-cloud-sdk/completion.bash.inc" \
         "/usr/local/etc/bash_completion" \
+        "${python_virtualenv_dir}/bin/activate" \
 
     do
         [[ -s "${i}" ]] && source "${i}"
@@ -72,3 +75,4 @@ if is_interactive; then
 fi  # end if is_interactive
 
 export BASHRC=true
+
