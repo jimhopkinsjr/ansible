@@ -111,7 +111,12 @@ is_macos() {
 # Stubbed in for now; just returns 1.
     log_debug "Begin."
     local return_value
-    return_value=1
+    uname_s=$(uname -s)
+    if [[ "${uname_s}" == "Darwin" ]]; then
+        return_value=0
+    else
+        return_value=1
+    fi
     log_debug "End. Returning \"${return_value}\"."
     return ${return_value}
 }
