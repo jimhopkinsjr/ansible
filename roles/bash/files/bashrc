@@ -78,3 +78,9 @@ fi  # end if is_interactive
 
 export BASHRC=true
 
+if is_macos; then
+    sudo defaults write .GlobalPreferences com.apple.mouse.scaling -1
+    sudo defaults write -g CGFontRenderingFontSmoothingDisabled -bool NO
+fi
+
+
