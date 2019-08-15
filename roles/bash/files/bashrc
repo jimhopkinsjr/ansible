@@ -16,6 +16,8 @@ export brofist="👊"
 export shrug="¯\\_(ツ)_/¯"
 export thumbsup="👍"
 export ANSIBLE_NOCOWS=1
+export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/secrets/ansible-vault-password-file"
+export DEFAULT_VAULT_PASSWORD_FILE="${ANSIBLE_VAULT_PASSWORD_FILE}"
 
 if command -v vimpager &>/dev/null; then
     if [[ -f ${HOME}/.vimpagerrc ]]; then
