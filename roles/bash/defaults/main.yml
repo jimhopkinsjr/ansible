@@ -20,3 +20,6 @@ bash_files:
   - name: "bashrc"
     src: "bashrc"
     dest: "{{ homedir }}/.bashrc"
+  - name: "bash_aws_profile.sh"
+    src: "bash_aws_profile.sh"
+    dest: "{{ homedir }}/.bash_aws_profile.sh"

@@ -1,6 +1,15 @@
 #!/use/bin/env bash
 
 case "${TERM_PROGRAM}" in
+    IDEA-C|PyCharm-C)
+        case "${PWD}" in
+            "${HOME}/puellmann.net")
+                REPO_DIR="${PWD}"
+                AWS_PROFILE="personal.jpuellma"
+                export AWS_PROFILE
+                ;;
+        esac
+        ;;
     iTerm.app)
         case "${ITERM_PROFILE}" in
             DEs)
@@ -12,6 +21,13 @@ case "${TERM_PROGRAM}" in
                 ;;
             Personal)
                 AWS_PROFILE="personal.jpuellma" && export AWS_PROFILE ;;
+            puellmann.net)
+                REPO_DIR="${HOME}/puellmann.net"
+                AWS_PROFILE="personal.jpuellma"
+                export AWS_PROFILE
+                cd "${REPO_DIR}" || return
+                [[ -s "./venv/bin/activate" ]] && source "./venv/bin/activate"
+                ;;
             SCE\ EBC)
                 AWS_PROFILE="366238733069_FullAdmin_Marketplace" && export AWS_PROFILE ;;
             TSYS)
