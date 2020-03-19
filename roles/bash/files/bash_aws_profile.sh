@@ -57,6 +57,4 @@ case "${TERM_PROGRAM}" in
                 AWS_PROFILE="none" ;;
         esac  # end case "${VSWORKSPACE}"
         ;;
-    *)
-        AWS_PROFILE="none" ;;
 esac  # end case "${TERM_PROGRAM}"

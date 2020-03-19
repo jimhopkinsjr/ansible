@@ -16,8 +16,8 @@ export brofist="👊"
 export shrug="¯\\_(ツ)_/¯"
 export thumbsup="👍"
 export ANSIBLE_NOCOWS=1
-export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/secrets/ansible-vault-password-file"
 export DEFAULT_VAULT_PASSWORD_FILE="${ANSIBLE_VAULT_PASSWORD_FILE}"
+export ANSIBLE_VAULT_PASSWORD_FILE="${HOME}/secrets/ansible-vault-password-file-ups"
 
 if command -v vimpager &>/dev/null; then
     if [[ -f ${HOME}/.vimpagerrc ]]; then
@@ -67,6 +67,7 @@ if is_interactive; then
         "/opt/google/google-cloud-sdk/completion.bash.inc" \
         "/usr/local/etc/bash_completion" \
         "${python_virtualenv_dir}/bin/activate" \
+        "${PWD}/.local.sh" \
 
     do
         [[ -s "${i}" ]] && source "${i}"
